@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+   
+    <title>Index - JoinUp</title>
+</head>
+<body>
+    <header id="encabezado">
+    
+       <nav id="navbar">  
+          <ul class="contenedor-nav"> 
+            <div class="contenedor-derecho">
+              <img id="logo" src="imagenes/logotipoJOINUP.png" alt="logo">
+              <li class="elementoMenu"> <a href="#encabezado"> Inicio </a></li>
+              <li class="elementoMenu"> <a href="#como-funciona"> Cómo funciona </a> </li>
+              <li class="elementoMenu"> <a href="crear_evento/crear-eventos.html"> Crear </a></li>
+              <li class="elementoMenu"> <a href="busquedaEventos/busqueda.html"> Buscar </a></li>
+              <li class="elementoMenu"> <a href="#contacto"> Contacto </a></li>
+            </div>
+
+            <div class="contenedor-izquierda">
+              <li class="elementoMenu" id="menuSecundario"> <a href="login/login.html" id="cuentaLink"> Mi cuenta </a> </li>
+              <img id="cuentaIcono" src="imagenes/usuario.png" alt="usuario">
+            </div>
+          </ul>
+        </nav> 
+
+    <div class="hero">
+      <div class="hero-contenido">
+        <h1>Conecta con personas.<span class="segunda-linea"> Vive experiencias únicas </span></h1>
+        <p class="hero-descripcion">
+         JoinUp es la plataforma para descubrir eventos, crear momentos y compartirlos con gente como tú.
+        </p>
+      </div>
+
+    </header>
+
+
+  <main id="fondo-secundario">
+
+      <section id="como-funciona">
+      <h2>CÓMO FUNCIONA</h2>
+
+      <div class="tarjetas">
+
+        <div class="tarjeta">
+          <div class="icono"> <img src="imagenes/lupa.png" alt="lupa"></div>
+          <h3>Explora</h3>
+          <p>Busca por los múltiples eventos y encuentra tu quedada deseada.</p>
+        </div>
+
+        <div class="tarjeta">
+          <div class="icono"> <img src="imagenes/unir.png" alt="unirse"></div>
+          <h3>Únete</h3>
+          <p>Una vez que hayas encontrado tu quedada, únete a las personas que componen el evento y comparte momentos.</p>
+        </div>
+
+        <div class="tarjeta">
+          <div class="icono"><img src="imagenes/colaboracion.png" alt="compartir"> </div>
+          <h3>Comparte</h3>
+          <p>Comparte los eventos que te han gustado o nuestra página, para que otras personas puedan unirse a la comunidad.</p>
+        </div>
+      </div>
+        </section>
+
+
+
+            <section id="crear-eventos">
+                <h2 class="titulo">CREAR EVENTOS</h2>
+                <p>Organiza tu propio evento. Da vida a tus ideas. Crea un evento único</p>
+
+               <div class="video-container"> 
+                <button class="boton-ce" id="btn-ce">Crea tu evento</button>
+              <video autoplay muted loop> 
+                <source src="video/videoCrearEvento (online-video-cutter.com).mp4" type="video/mp4"> 
+              </video> 
+               </div>
+              
+              </section>
+
+
+
+    <section id="buscar-eventos">
+                <h2>BUSCAR EVENTOS</h2>
+                <p>A continuacion os dejamos fotografías de otros eventos</p>
+        <div id="carrusel">
+  
+                <button id="anterior"> <img class="boton-anterior" src="imagenes/right-chevron_13977818.png" style="transform: scaleX(-1);" alt="left"/> </button>
+                <div id="evento">  
+                    <img id="imgEvento" src="" alt="">
+                </div>
+                <button id="siguiente"> <img class="boton-siguiente" src="imagenes/right-chevron_13977818.png" alt="right" /> </button>
+        </div>
+
+              <button class="boton-be" id="btn-be"><img src="imagenes/lupa.png" alt="lupa"> <span>Buscar evento</span></button>
+    </section>
+
+
+
+
+            <section id="contacto">
+               <h2>CONTACTO</h2>
+
+                <div class="contacto-contenido">
+                  <div class="contacto-imagen">
+                    <img src="imagenes/como_encontrar_las_mejores_formas_de_contacto_de_las_empresas_50780_600.webp" alt="Teléfono">
+                  </div>
+
+                  <form class="contacto-formulario">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" required>
+
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono">
+
+                    <label for="comentario">Comentario</label>
+                    <textarea id="comentario" name="comentario" rows="6"></textarea>
+
+                    <p class="contacto-texto">
+                      También nos puedes enviar tus fotos de tus eventos, publicaremos las mejores en nuestra página:
+                    </p>
+
+                    <div class="campo-archivo">
+                    <input type="file" id="archivo" name="archivo">
+                    <button type="button" id="borrar-archivo">Quitar</button>
+                    </div>
+
+
+                    <button type="submit" class="boton-enviar">Enviar</button>
+                  </form>
+
+                </div> <!-- Se cierra el div de contacto-contenido -->
+            </section>
+
+    </main>
+
+  <!-- Enlazamos con nuestro JS-->
+    <script src="script.js"> </script>
+  
+    <footer>
+      <div class="footer-contenido">
+
+        <!-- Opiniones -->
+        <div class="footer-col">
+          <p class="opiniones">En base a unas 13.753 opiniones</p>
+          <img class="trustpilot" src="imagenes/imagen_2025-09-26_140931079-removebg-preview.png" alt="Trustpilot estrellas" >
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="footer-col">
+          <h4 class="tituloFooter">Encuéntranos en:</h4>
+          <div class="redes-sociales">
+            <a href="#"><img src="imagenes/facebook-brands.svg" alt="Facebook"></a>
+            <a href="#"><img src="imagenes/square-instagram-brands.svg" alt="Instagram"></a>
+            <a href="#"><img src="imagenes/square-whatsapp-brands.svg" alt="WhatsApp"></a>
+            <a href="#"><img src="imagenes/square-x-twitter-brands.svg" alt="X (Twitter)"></a>
+          </div>
+        </div>
+
+        <!-- Información -->
+        <div class="footer-col">
+          <h4>INFORMACIÓN</h4>
+          <ul>
+            <li><a href="#">Equipo</a></li>
+            <li><a href="#">Trabaja con nosotros</a></li>
+            <li><a href="#">Política y privacidad</a></li>
+            <li><a href="#">Política de cookies</a></li>
+          </ul>
+          <p class="ic"><img src="imagenes/telefono.png" alt="telefono" > +34 697 56 88 23</p>
+          <p class="ic"><img src="imagenes/correo.png" alt="correo" > info@joinup.com</p>
+        </div>
+
+        <!-- Suscripción -->
+        <div class="footer-col suscripcion-footer">
+          <h4>SUSCRÍBETE A NUESTRAS NOTICIAS</h4>
+          <p>Recibe ofertas, novedades y mucho más</p>
+          <form class="suscripcion-form">
+            <input type="email" placeholder="¿Cuál es tu e-mail?" required>
+            <label class="checkbox">
+              <input type="checkbox" required> He leído y acepto la 
+              <a href="#">política de privacidad</a>
+            </label>
+            <div class="btn-suscripcion"><button type="submit">Quiero suscribirme</button></div>
+          </form>
+        </div>
+
+      </div>
+    </footer>
+
+  <!-- Scripts -->
+  <script src="js/auth.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,947 @@
+@font-face {
+  font-family: "Modern"; 
+  src: url("../../fuentes/ModernAesthetic-DemoVersion-Regular.otf");
+}
+
+@font-face {
+    font-family: "Actor" ;
+    src: url("../../fuentes/Actor-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat" ;
+    src: url("../../fuentes/MontserratAlternates-Regular.ttf");
+}
+@font-face {
+    font-family: "Montserrat bold" ;
+    src: url("../../fuentes/MontserratAlternates-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("../../fuentes/Oswald-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("../../fuentes/Quicksand-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Staatliches" ;
+    src: url("../../fuentes/Staatliches-Regular.ttf");
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: "Actor", sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    background-color: var(--fondo-principal);    
+}
+
+/* GLOBALES */
+h1, h2, h3 {
+    font-family: "Montserrat bold" , serif;
+    margin: 0 0 0 0;
+}
+
+h1 {  
+    font-size: 5rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3rem;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+:root{
+  --fondo-principal: #4B6DA7;
+  --texto-principal: #2D3748;
+  --color-marca: #38B2AC;
+  --botones: #F6AD55;
+  --boton-secundario: #FB7D6D;
+  --fondo-secundario: #F5F9FA;
+}
+
+/*************** HERO IMAGE*************/
+#encabezado {
+    width: 100%;
+    height: 1200px;
+}
+
+.hero{
+    width: 100%;
+    height: 1200px;
+    background-image: linear-gradient( to left, transparent 20%, #2D3748 70%), url(../../imagenes/busquedaEventosHero.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -20px; 
+}
+
+.hero-contenido h1 {
+    color: white;
+    font-size: 10rem;
+    margin-left: 8rem;
+    padding-top: 5rem;
+}
+
+.segunda-linea {
+    display: block;
+    margin-top: -5rem;
+}
+
+.hero-descripcion {
+    color: white;
+    font-family: "Actor";
+    font-size: 5rem;
+    margin-left: 12rem;
+}
+
+p .segunda-linea{
+    display: block;
+    margin-top: -2rem;
+    margin-bottom: -10rem;
+}
+
+.btn-crearEvento{
+    margin: 0rem 40rem;
+    background-color: var(--color-marca);
+    color: #F5F9FA;
+    font-family: "Modern";
+    font-size: 20px;
+    width:25rem;
+    height: 8rem;
+    border-radius: 20rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color .3s ease-out ;
+}
+.btn-crearEvento:hover {
+    background-color: var(--fondo-principal);
+}
+
+/* MENU Y LOGO */
+#logo{
+    width: 13rem;
+    height: auto;
+    margin: 0 5rem;
+}
+
+#cuentaIcono {
+    width: 8rem;
+    height: auto;
+    margin: 0 10rem 0 -5rem
+}
+#navbar {
+    position: fixed;
+    height: 17rem;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.403);
+    border-radius: 0 0 40px 40px;
+    transition: top 0.6s ease-in-out; /* para que el scroll del JS sea más suave */
+    z-index: 1000;
+    top:0;
+}
+.contenedor-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.contenedor-derecho,
+.contenedor-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.elementoMenu a {
+    color: var(--fondo-principal);
+    font-family: "Modern";
+    font-size: 3rem;
+    margin: 0 5rem;
+}
+
+
+@media (max-width: 1920px) { 
+
+#encabezado {
+    height: 890px;
+}
+
+.hero{
+    height:890px;
+    margin-top: -70px; 
+}
+
+.hero-contenido h1 {
+    font-size: 7rem;
+    margin-bottom: -5rem;
+    margin-top: 3rem;
+}
+
+.hero-descripcion {
+    font-size: 3rem;
+    margin-left: 10rem;
+    margin-top: 6rem;
+    margin-bottom: 10rem;
+}
+
+.btn-crearEvento{
+    margin: 0rem 20rem;
+ } 
+
+ /* MENU Y LOGO */
+#logo{
+    width: 10rem;
+}
+
+#cuentaIcono {
+    width: 5rem;
+
+}
+#navbar {
+    height: 14rem; 
+}
+
+.elementoMenu a {
+    font-size: 2.5rem;
+
+}
+
+}  /* CIERRE DE MQ 1910*/
+
+/* empezamos con MAC SIN RETINA*/
+@media (max-width: 1440px) { 
+      
+#encabezado {
+    height: 830px;
+}
+
+.hero{
+    height: 830px;
+    margin-top: -100px; 
+}
+
+.hero-contenido h1 {
+    font-size: 7rem;
+    margin-bottom: -10rem;
+    margin-top: 5rem;
+}
+
+.hero-descripcion {
+    font-size: 3rem;
+    margin-left: 10rem;
+    margin-top: 10rem;
+
+}
+
+.btn-crearEvento{
+    margin: 1rem 20rem;
+ } 
+
+ /* MENU Y LOGO */
+#logo{
+    width: 8rem;
+}
+
+#cuentaIcono {
+    width: 4rem;
+
+}
+#navbar {
+    height: 11rem; 
+}
+
+.elementoMenu a {
+    font-size: 2rem;
+
+}
+ } /* CIERRE MAC*/ 
+
+
+ /* SIGAMOS CON EL CODIGO PARA PANTALLAS 2K*/
+
+main {
+   width: 95%;
+   height: 255rem;
+   background-color: var(--fondo-secundario); 
+   margin: 5rem auto;
+   border-radius: 2rem;
+   box-shadow: 5px 5px rgba(0, 0, 0, 0.403);
+   border: none;
+}
+
+main h1 {
+    color: var(--color-marca);
+    font-family: "Staatliches";
+    font-weight: lighter;
+    font-size: 9.6rem;
+    text-align: center;
+}
+
+/************* BARRA DE EXPLORACION **************/
+
+.explorador {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 140rem;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+/* Icono */
+.explorador img {
+    width: 5rem;
+}
+
+.buscador-input {
+    border: none;
+    outline: none;
+    font-size: 4rem;
+    flex: 1;
+}
+
+.divisor {
+    width: 1px;
+    height: 3rem;
+    background: #ccc;
+}
+
+/* ----- FILTRO PRINCIPAL ----- */
+.container-filtro {
+    position: relative;
+}
+
+.btn-filtro {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 3rem;
+    color: #555;
+}
+
+/* PANEL */
+#explorador-busqueda {
+    display: flex;
+    justify-content: center;
+}
+.panel-filtro {
+    position: absolute;
+    width: 40rem;
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 5;
+}
+
+.seccion-filtro { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 0.6rem; 
+}
+
+.seccion-filtro label { 
+    font-size: 2rem; 
+    color: #444; 
+}
+
+/* -----  Categoría desplegable ----- */
+.desplegable { 
+    position: relative; 
+}
+
+.desplegable-btn {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+    background: #fff;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    text-align: left;
+}
+
+.desplegable-menu {
+    display: none;
+    background: white;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    border-radius: 0.6rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+    z-index: 50;
+}
+
+.desplegable-item {
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 100;
+}
+.desplegable-item:hover { 
+    background: #f1f1f1; 
+}
+
+/* --- fecha ----*/
+.seleccion-fecha {
+    width: 60%;
+}
+/* ---- autocompletar ---- */
+.autocompletar {
+    position: relative;
+}
+
+.autocompletar-input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 0.6rem;
+    border: 1px solid #ddd;
+}
+
+.autocompletar-box {
+    position: absolute;
+    top: 110%;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.6rem;
+    display: none;
+}
+
+.autocompletar-item {
+    padding: 0.8rem;
+    cursor: pointer;
+    z-index: 100;
+}
+.autocompletar-item:hover { 
+    background: #eee; 
+}
+
+/* ---- Toggle ---- */
+.toggle { 
+    display: flex; 
+    align-items: center; 
+    gap: 1rem; 
+    cursor: pointer;
+}
+
+.toggle input { 
+    display: none; 
+}
+
+.slider {
+    width: 4.5rem;
+    height: 2.2rem;
+    background: #ccc;
+    border-radius: 3rem;
+    position: relative;
+    transition: 0.3s;
+}
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: white;
+    border-radius: 50%;
+    top: 0.2rem;
+    left: 0.2rem;
+    transition: 0.3s;
+}
+
+input:checked + .slider { 
+    background: #4caf50; 
+}
+input:checked + .slider::before { 
+    transform: translateX(23px); 
+}
+
+.btn-guardar-filtros {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-marca);
+    border: none;
+    border-radius: 0.6rem;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease-out;
+}
+
+.btn-guardar-filtros:hover {
+    background: var(--fondo-principal);
+}
+
+
+@media (max-width: 1920px) { 
+.explorador {
+    max-width: 1000px;
+    padding: 1.5rem 3.5rem;
+}
+/* Icono */
+.explorador img {
+    width: 4.5rem;
+}
+.buscador-input {
+    font-size: 3.5rem;
+}
+/* PANEL */
+.panel-filtro {
+    position: absolute;
+    width: 45rem;
+}
+.seccion-filtro label { 
+    font-size: 2rem; 
+}
+} /* FIN DE MQ ESTANDAR*/
+
+
+@media (max-width: 1440px) { 
+
+.explorador {
+    max-width: 850px;
+    padding: 1.2rem 3.0rem;
+}
+/* Icono */
+.explorador img {
+    width: 4rem;
+}
+.buscador-input {
+    font-size: 3rem;
+}
+/* PANEL */
+.panel-filtro {
+    position: absolute;
+    width: 35rem;
+}
+.seccion-filtro label { 
+    font-size: 1.7rem; 
+}
+} /* FIN DE MQ MAC*/
+
+/* SEGUIMOS CON LA DE 2K*/
+.eventos {
+    background-color: white;
+    width: 90%;
+    height: 210rem;
+    margin: 10rem auto;
+    border: 1px solid #9F9F9F;
+    border-radius: 20px;
+}
+
+
+/************************ ARTICULO UNO*****************************************/
+.eventos-uno{
+    height: 97rem;
+}
+.eventos-uno h2{
+    font-family: "Modern";
+    font-size: 4.5rem;
+    margin: 10rem 10rem;
+}
+.eventos-pop{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin: 0 10rem 10rem 10rem;
+}
+.evento-pop{
+    width: 60rem;
+    height: 45rem; 
+}
+.imagen-responsive {
+    height: 40rem;
+    width: 60rem;
+    overflow: hidden;
+    border-radius: 2rem 2rem 0 0;
+    border: none;
+}
+.imagen-responsive img{
+    width: 100%;
+    display: block;
+    grid-area: 1 / 1; 
+    border-radius: 10px 10px 0 0;
+}
+.contenedor-texto {
+    position: relative;
+    background-color: #FFFDFD;
+    border: 1px solid #B8B8B8;
+    border-radius: 0rem 0rem 1rem 1rem;
+    margin: 0 auto;
+    height: 30rem;
+    width: 60rem;
+}
+.contenedor-texto h3{
+    font-family: "Oswald";
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 3rem;
+}
+.contenedor-texto p{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    margin-top: -0.2rem;
+}
+.detalles{
+    display: flex;
+    justify-content: space-around;
+}
+.detalle {
+    display: flex;
+    align-items: center;
+    gap: 6px; 
+    font-size: 2rem;
+}
+.detalle img{
+    width:5rem;
+}
+.centrar-btn{
+    display: flex;
+    justify-content: center ;
+    margin-top: 2.5rem;
+}
+.unirse {
+    width: 18rem;
+    height: 5rem;
+    background-color: var(--color-marca);
+    color: white;
+    font-family: "Modern";
+    font-size: 2rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.unirse:hover{
+    background-color: var(--botones);
+}
+.favorito {
+    width: 5rem;
+    position: relative;
+    margin-left: 55rem;
+    margin-top: -4rem;
+    cursor: pointer;
+}
+
+/************************ ARTICULO DOS*****************************************/
+
+.eventos-dos h2 {
+    font-family: "Modern";
+    font-size: 4.5rem;
+    margin: 0 10rem 10rem 10rem;
+}
+
+/*  etiqueta Precio */
+.imagen-responsive{
+    display: grid;
+    width: 100%;
+}
+.etiquetaPrecioGratis {
+    width: 12rem;
+    height: 4.5rem;
+    grid-area: 1 / 1;   /* se superpone a la imagen */
+    justify-self: end;  
+    align-self: start;  
+    background-color: var(--botones);
+    color: #000;
+    font-weight: bold;
+    font-family: "Actor";
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    border: 3px solid var(--boton-secundario);
+    transform: rotate(15deg);
+    margin: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.433);
+}
+.etiquetaPrecioPago {
+    width: 12rem;
+    height: 4.5rem;
+    grid-area: 1 / 1;   /* se superpone a la imagen */
+    justify-self: end;  
+    align-self: start;  
+    background-color: var(--boton-secundario);
+    color: #000;
+    font-weight: bold;
+    font-family: "Actor";
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    border: 3px solid var(--botones);
+    transform: rotate(15deg);
+    margin: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.433);
+}
+
+/****************** JAVASCRIPT DE EVENTOS FILTRADOS ************************/
+#contenedor-filtrados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
+  justify-content: center;
+  gap: 4rem;
+  margin: 0 auto;
+}
+#contenedor-filtrados .evento-pop {
+  width: 60rem !important;
+  height: auto;
+}
+
+#contenedor-filtrados .imagen-responsive {
+  width: 60rem !important;
+  height: 40rem !important;
+}
+
+#contenedor-filtrados .contenedor-texto {
+  width: 60rem !important;
+}
+
+#contenedor-filtrados.eventos-pop {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 0 10rem 0 12rem;
+}
+/* Fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade 0.5s forwards ease-out;
+}
+@keyframes fade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mensaje de no resultados */
+#mensaje-no-resultados {
+    display: none;
+    font-size: 3rem;
+    font-family: "Modern";
+    text-align: center;
+    margin: 4rem 0;
+    opacity: 0.7;
+}
+#mensaje-no-resultados{
+    color: red;
+    font-family: "Staatliches";
+    font-size: 5rem;
+}
+.alinear-boton {
+    display: flex;
+    justify-content: center;
+}
+.btn-reset-filtros {
+     background-color: var(--botones);
+     border: none;
+     height: 4rem;
+     border-radius: 2rem;
+     width: 50%;
+     
+}
+
+.btn-reset-filtros:hover {
+     background-color: var(--boton-secundario);
+}
+
+
+
+@media (max-width: 1920px) { 
+    main{
+        height: 230rem;
+    }
+    .eventos {
+    height: 183rem;
+}
+/************************ ARTICULO UNO*****************************************/
+.eventos-uno h2{
+    font-size: 3.5rem;
+    margin: 10rem 0rem 7rem 10rem;
+}
+.eventos-pop{
+    margin: 0 10rem 10rem 10rem;
+}
+.evento-pop{
+    width: 45rem;
+    height: 45rem; 
+}
+.imagen-responsive {
+    height: 40rem;
+    width: 45rem;
+}
+.imagen-responsive img{
+    border-radius: 10px 10px 0 0;
+}
+.contenedor-texto {
+    margin: -10rem auto;
+    height: 31rem;
+    width: 45rem;
+}
+
+.contenedor-texto p{
+    font-size: 2.2rem;
+}
+.favorito {
+    margin-left: 40rem;
+    margin-top: -1rem;
+}
+
+/************************ ARTICULO DOS*****************************************/
+.contenedor-texto .interlineado:nth-child(1),
+.interlineado:nth-child(2) {
+    line-height: 2.5rem;
+}
+
+.eventos-dos h2 {
+    font-size: 3.5rem;
+    margin: -12rem 0rem 7rem 10rem;
+}
+/****************** JAVASCRIPT DE EVENTOS FILTRADOS ************************/
+#contenedor-filtrados .evento-pop {
+  width: 45rem !important;
+  height: auto;
+}
+
+#contenedor-filtrados .imagen-responsive {
+  width: 45rem !important;
+  height: 40rem !important;
+}
+
+#contenedor-filtrados .contenedor-texto {
+  width: 45rem !important;
+}
+
+} /* FIN DEL MQ ESTANDAR*/
+
+
+@media (max-width: 1440px) { 
+    main{
+    height: 187rem;
+    }
+    .eventos {
+    height: 140rem;
+}
+/************************ ARTICULO UNO*****************************************/
+.eventos-uno h2{
+    font-size: 3rem;
+    margin: 7rem 0rem 5rem 7rem;
+}
+.eventos-pop{
+    margin: 0 7rem 7rem 7rem;
+}
+.evento-pop{
+    width: 35rem;
+    height: 35rem; 
+}
+.imagen-responsive {
+    height: 35rem;
+    width: 35rem;
+}
+.contenedor-texto {
+    margin: -12rem auto;
+    height: 24rem;
+    width: 35rem;
+}
+
+.contenedor-texto h3{
+    margin-top: 0.5rem;
+    font-size: 2.7rem;
+}
+.contenedor-texto p{
+    font-size: 2rem;
+    margin-top: -0.2rem;
+}
+.detalle {
+    font-size: 2rem;
+}
+.detalle img{
+    width: 3.5rem;
+}
+.centrar-btn{
+    margin-top: 1.5rem;
+}
+.unirse {
+    width: 13rem;
+    height: 4.5rem;
+    font-size: 1.7rem;
+}
+.favorito {
+    width: 4rem;
+    position: relative;
+    margin-left: 31rem;
+    margin-top: -8rem;
+    z-index: 1000;
+}
+/************************ ARTICULO DOS*****************************************/
+.contenedor-texto .interlineado:nth-child(1),
+.interlineado:nth-child(2) {
+    line-height: 2rem;
+}
+.eventos-dos h2 {
+    font-size: 3rem;
+    margin: -30rem 0rem 5rem 7rem;
+}
+/*  etiqueta Precio */
+.etiquetaPrecioGratis {
+    width: 10rem;
+    height: 4rem;
+    font-size: 1.7rem;
+}
+.etiquetaPrecioPago {
+    width: 10rem;
+    height: 4rem;
+    font-size: 1.7rem;
+}
+/****************** JAVASCRIPT DE EVENTOS FILTRADOS ************************/
+#contenedor-filtrados {
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+}
+#contenedor-filtrados .evento-pop {
+  width: 35rem !important;
+  height: auto;
+}
+
+#contenedor-filtrados .imagen-responsive {
+  width: 35rem !important;
+  height: 35rem !important;
+}
+
+#contenedor-filtrados .contenedor-texto {
+  width: 35rem !important;
+}
+/* Mensaje de no resultados */
+#mensaje-no-resultados{
+    font-size: 3.5rem;
+}
+#mensaje-no-resultados img{
+    width: 100rem;
+}
+}

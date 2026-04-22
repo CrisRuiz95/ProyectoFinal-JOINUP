@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+     
+    <title>Motor de búsqueda</title>
+</head>
+<body>
+
+  <header id="encabezado">
+        <nav id="navbar">  
+          <ul class="contenedor-nav"> 
+            <div class="contenedor-derecho">
+              <img id="logo" src="../imagenes/logotipoJOINUP.png" alt="logo">
+              <li class="elementoMenu"> <a href="../index.html"> Home </a></li>
+            </div>
+
+            <div class="contenedor-izquierda">
+              <li class="elementoMenu"> <a href="../area_personal/usuario.html" id="cuentaLink"> Mi cuenta </a> </li>
+              <img id="cuentaIcono" src="../imagenes/usuario.png" alt="usuario">
+            </div>
+          </ul>
+        </nav> 
+
+    <div class="hero">
+      <div class="hero-contenido">
+        <h1>Descubre eventos.</h1>
+        <h1>Únete a nuevas <span class="segunda-linea"> experiencias. </span></h1>
+        <p class="hero-descripcion">
+        Busca actividades, conoce personas y <span class="segunda-linea">vive momentos inolvidables con <strong>JoinUp </span></br>
+      </p>
+      </div>
+
+      <button class="btn-crearEvento" id="btn-ce"> Crea tu evento </button>
+    </div>
+  </header> <!-- FINALIZAMOS HEADER-->
+
+  <main>
+    <h1>explora eventos</h1>
+
+
+<section id="explorador-busqueda">   
+  <div class="explorador">
+
+    <img src="../imagenes/lupa.png" alt="lupa">
+    <input type="search" placeholder="Busca un evento" class="buscador-input">
+
+    <div class="divisor"></div>
+
+    <!-- BOTÓN FILTRO -->
+    <div class="container-filtro">
+        <button class="btn-filtro">Filtro</button>
+
+        <!-- PANEL DESPLEGABLE DE FILTROS -->
+        <div class="panel-filtro">
+          <div class="alinear-boton"><button class="btn-reset-filtros">Restablecer filtros</button></div>
+            <!-- Categoría desplegable-->
+            <div class="seccion-filtro">
+                <label>Categoría</label>
+                <div class="desplegable">
+                    <button class="desplegable-btn">Selecciona la categoría</button>
+                    <div class="desplegable-menu">
+                        <div class="desplegable-item">Música</div>
+                        <div class="desplegable-item">Viajes</div>
+                        <div class="desplegable-item">Deportes</div>
+                        <div class="desplegable-item">Fiesta</div>
+                        <div class="desplegable-item">Networking</div>
+                        <div class="desplegable-item">Cine</div>
+                        <div class="desplegable-item">Fotografía</div>
+                        <div class="desplegable-item">Otros</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fecha -->
+            <div class="seccion-filtro">
+                <label>Fecha</label>
+                <input type="date" class="seleccion-fecha">
+            </div>
+
+            <!-- Ubicación -->
+            <div class="seccion-filtro">
+                <label>Ubicación</label>
+                <div class="autocompletar">
+                    <input type="text" placeholder="Escribe una ciudad" class="autocompletar-input">
+                    <div class="autocompletar-caja"></div>
+                </div>
+            </div>
+
+            <!-- Precio -->
+            <div class="seccion-filtro">
+                <label>Precio</label>
+                <label class="toggle">
+                    <input type="checkbox" id="toggle-precio">
+                    <span class="slider"></span>
+                    <span class="toggle-label">Gratuito / De pago</span>
+                </label>
+            </div>
+        <button class="btn-guardar-filtros">Guardar cambios</button>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="eventos">
+  <article class="eventos-uno">
+    <h2 id="titulo-populares">Eventos Populares</h2>
+      <div class="eventos-pop" id="contenedor-filtrados" style="display:none;"> </div>
+      <div id="mensaje-no-resultados"> <p>No se encontraron eventos</p> 
+        <img src="../imagenes/no-resultados.png" alt="sin resultados">
+      </div>
+
+        <div class="eventos-pop" id="contenedor-original">
+        <div class="evento-pop" data-categoria="Deportes" data-fecha="2026-10-10" data-ubicacion="Sevilla" data-precio="Gratuito">
+          <div class="imagen-responsive"><img src="../imagenes/Yoga-aire-libre.jpg" alt="yoga">
+          <div class="etiquetaPrecioGratis"> Gratuito </div>
+          </div>
+          <div class="contenedor-texto">
+            <h3>Yoga en el parque</h3>
+            <p>Clase de yoga al aire libre en grupo</p>
+
+            <div class="detalles">
+              <div class="detalle"> <img src="../imagenes/calendario.png" alt="calendario"><span>10 de octubre</span></div>
+              <div class="detalle"> <img src="../imagenes/pasador-de-ubicacion.png" alt="ubicación"> Sevilla</div>
+            </div>
+
+              <div class="centrar-btn"><button class="unirse"> Unirse </button></div> 
+              <img class="favorito" src="../imagenes/favorito.png" alt="favorito">
+          </div> 
+        </div>
+
+
+      <div class="evento-pop" data-categoria="Fiesta" data-fecha="2026-07-08" data-ubicacion="Barcelona" data-precio="Gratuito">
+          <div class="imagen-responsive"><img src="../imagenes/festival.jpg" alt="festival">
+          <div class="etiquetaPrecioGratis"> Gratuito </div>
+          </div>
+          <div class="contenedor-texto">
+            <h3>Festival</h3>
+            <p>Grupo para pasarlo bien con el tecno</p>
+
+            <div class="detalles">
+              <div class="detalle"> <img src="../imagenes/calendario.png" alt="calendario"><span>8 de Julio</span></div>
+              <div class="detalle"> <img src="../imagenes/pasador-de-ubicacion.png" alt="ubicación"> Barcelona </div>
+            </div>
+
+              <div class="centrar-btn"><button class="unirse"> Unirse </button></div> 
+              <img class="favorito" src="../imagenes/favorito.png" alt="favorito">
+          </div> 
+        </div>
+
+
+       <div class="evento-pop" data-categoria="Deportes" data-fecha="2026-11-27" data-ubicacion="Segovia" data-precio="Gratuito">
+
+          <div class="imagen-responsive"><img src="../imagenes/pelota-campo-futbol-material-torneo-competize.jpeg" alt="futbol">
+          <div class="etiquetaPrecioGratis"> Gratuito </div>
+          </div>
+          <div class="contenedor-texto">
+            <h3>Torneo de futbol</h3>
+            <p>Ven y demuestra tu talento en equipo</p>
+
+            <div class="detalles">
+              <div class="detalle"> <img src="../imagenes/calendario.png" alt="calendario"><span>27 de Septiembre</span></div>
+              <div class="detalle"> <img src="../imagenes/pasador-de-ubicacion.png" alt="ubicación"> Segovia </div>
+            </div>
+
+              <div class="centrar-btn"><button class="unirse"> Unirse </button></div> 
+              <img class="favorito" src="../imagenes/favorito.png" alt="favorito">
+          </div> 
+        </div>
+        
+      </div> <!-- CIERRE DE EVENTOS-POP-->
+
+     
+    </article>
+
+  <article class="eventos-dos">
+     <h2 id="titulo-recientes">Eventos Recientes</h2>
+     <div class="eventos-pop">
+
+        <div class="evento-pop" data-categoria="Fotografía" data-fecha="2026-04-30" data-ubicacion="Vizcaya" data-precio="De pago">
+          <div class="imagen-responsive"><img src="../imagenes/fotografiaCurso.jpg" alt="fotografía">
+          <div class="etiquetaPrecioPago"> 5€ </div>
+          </div>
+          <div class="contenedor-texto">
+            <h3>Curso de fotografía</h3>
+            <p class="interlineado">Para realizar fotos a la ermita de San Juan</p>
+
+            <div class="detalles">
+              <div class="detalle"> <img src="../imagenes/calendario.png" alt="calendario"><span>30 de Abril</span></div>
+              <div class="detalle"> <img src="../imagenes/pasador-de-ubicacion.png" alt="ubicación">Vizcaya</div>
+            </div>
+
+              <div class="centrar-btn"><button class="unirse"> Unirse </button></div> 
+              <img class="favorito" src="../imagenes/favorito.png" alt="favorito">
+          </div> 
+        </div>
+
+
+      <div class="evento-pop" data-categoria="Deportes" data-fecha="2026-12-13" data-ubicacion="León" data-precio="Gratuito">
+          <div class="imagen-responsive"> <img src="../imagenes/nieve.jpg" alt="nieve">
+          <div class="etiquetaPrecioGratis"> Gratuito </div>
+          </div>
+          
+          <div class="contenedor-texto">
+            <h3>Ski en grupo</h3>
+            <p class="interlineado">Si te gustan los deportes de nieve este es el tuyo</p>
+
+            <div class="detalles">
+              <div class="detalle"> <img src="../imagenes/calendario.png" alt="calendario"><span>13 de Diciembre</span></div>
+              <div class="detalle"> <img src="../imagenes/pasador-de-ubicacion.png" alt="ubicación"> León </div>
+            </div>
+
+              <div class="centrar-btn"><button class="unirse"> Unirse </button></div> 
+              <img class="favorito" src="../imagenes/favorito.png" alt="favorito">
+          </div> 
+        </div>
+
+
+       <div class="evento-pop" data-categoria="Otros" data-fecha="2026-01-04" data-ubicacion="Madrid" data-precio="De pago">
+          <div class="imagen-responsive"><img src="../imagenes/museo del prado.webp" alt="yoga">
+          <div class="etiquetaPrecioPago"> 10€ </div>
+          </div>
+          <div class="contenedor-texto">
+            <h3>Museo del prado</h3>
+            <p>Ejerzo de guía para grupo interesado</p>
+
+            <div class="detalles">
+              <div class="detalle"> <img src="../imagenes/calendario.png" alt="calendario"><span>4 de Enero</span></div>
+              <div class="detalle"> <img src="../imagenes/pasador-de-ubicacion.png" alt="ubicación"> Madrid </div>
+            </div>
+
+              <div class="centrar-btn"><button class="unirse"> Unirse </button></div> 
+              <img class="favorito" src="../imagenes/favorito.png" alt="favorito">
+          </div> 
+        </div>
+      </div> <!-- CIERRE DE EVENTOS-POP-->
+  </article>
+</section>  
+
+  </main>
+    <!-- Enlazamos con nuestro JS-->
+    <script src="../js/auth.js"></script>
+    <script src="script.js"> </script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area de usuario</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../normalize.css">
+</head>
+<body>
+    
+    <div class="container"> <!-- Tarjeta que contiene todo el contenido como background-->
+    <header>
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+            <a href="../pagos/pagos-1.html">Hacer premium</a> <!-- Recordar que solo tiene que aparecer esta pestaña para los usuarios que no son premium -->
+        </nav>
+
+        <button class="btn-logout">Cerrar sesión</button>
+    </header>
+
+
+    <main class="main-container">
+
+        <section class="panel-izquierdo"> <!-- PANEL IZQUIERDO -->
+          <div class="perfil-usuario">
+
+            <div class="avatar-usuario">
+            <!-- avatar foto--> 
+            <img src="../imagenes/usuario.png" class="avatar" alt="Usuario">
+            <!-- icono editar foto-->     
+            <img class="editar-icono" src="https://img.icons8.com/windows/64/create-new.png" alt="editar-avatar">
+              <input type="file" id="avatar-input" accept="image/*" style="display:none;">
+              <!-- icono borrar foto--> 
+            <img class="borrar-foto" width="64" height="64" src="https://img.icons8.com/material-outlined/96/remove-image.png" alt="eliminar-avatar"/>
+            </div> <!-- cierre avatar-usuario -->
+
+            <h3 class="usuario-nombre">Marina Blanco</h3>
+            <p class="usuario-email">marinablanco@example.com</p>
+            </div>
+            
+            <nav class="menu">
+                <button class="menu-item active">Información personal</button>
+                <button class="menu-item">Deseados</button>
+                <button class="menu-item ">Ajustes</button>
+            </nav>
+        </section>
+
+
+
+        <section class="panel-derecho"> <!-- PANEL DERECHO -->
+
+    <!--PANTALLA INFORMACION-->
+<div id="pantalla-info" class="pantalla visible">
+
+    <h2>Información personal</h2>
+
+    <div class="info-personal-panel">
+
+        <div class="info-item">
+            <span class="info-label">Fecha de nacimiento:</span>
+            <span class="info-value" id="info-fecha">-</span>
+        </div>
+
+        <div class="info-item">
+            <span class="info-label">Ciudad:</span>
+            <span class="info-value" id="info-ciudad">-</span>
+        </div>
+
+        <div class="info-item">
+            <span class="info-label">Provincia:</span>
+            <span class="info-value" id="info-provincia">-</span>
+        </div>
+
+        <div class="info-item">
+            <span class="info-label">Teléfono:</span>
+            <span class="info-value" id="info-telefono">-</span>
+        </div>
+
+        <div class="info-item bloque-completo">
+            <span class="info-label">Redes sociales:</span>
+            <span class="info-value" id="info-redes">-</span>
+        </div>
+
+        <div class="info-item bloque-completo">
+            <span class="info-label">Intereses:</span>
+            <div class="info-intereses" id="info-intereses"></div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+    <!--PANTALLA DESEADOS-->
+    <div id="pantalla-deseados" class="pantalla">
+        <h2>Eventos Deseados</h2>
+        <p>Aquí irán tus eventos deseados...</p>
+    </div>
+
+    <!--PANTALLA AJUSTES-->
+    <div id="pantalla-ajustes" class="pantalla">
+        <h2>Ajustes</h2>
+        <form class="form-grid" id="form-ajustes">
+
+            <div class="campo">
+                <label>Fecha de nacimiento</label>
+                <input type="date" id="ajuste-fecha">
+            </div>
+
+            <div class="fila-ubicacion">
+                <div class="campo campo-ciudad">
+                    <label>Ciudad</label>
+                    <input type="text" id="ajuste-ciudad">
+                </div>
+
+                <div class="campo campo-provincia">
+                    <label>Provincia</label>
+                    <select id="ajuste-provincia">
+                        <option value="">Seleccione una provincia</option>
+                        <option>A Coruña</option>
+                        <option>Álava</option>
+                        <option>Albacete</option>
+                        <option>Alicante</option>
+                        <option>Almería</option>
+                        <option>Asturias</option>
+                        <option>Ávila</option>
+                        <option>Badajoz</option>
+                        <option>Barcelona</option>
+                        <option>Burgos</option>
+                        <option>Cáceres</option>
+                        <option>Cádiz</option>
+                        <option>Cantabria</option>
+                        <option>Castellón</option>
+                        <option>Ciudad Real</option>
+                        <option>Córdoba</option>
+                        <option>Cuenca</option>
+                        <option>Girona</option>
+                        <option>Granada</option>
+                        <option>Guadalajara</option>
+                        <option>Gipuzkoa</option>
+                        <option>Huelva</option>
+                        <option>Huesca</option>
+                        <option>Illes Balears</option>
+                        <option>Jaén</option>
+                        <option>La Rioja</option>
+                        <option>Las Palmas</option>
+                        <option>León</option>
+                        <option>Lleida</option>
+                        <option>Lugo</option>
+                        <option>Madrid</option>
+                        <option>Málaga</option>
+                        <option>Murcia</option>
+                        <option>Navarra</option>
+                        <option>Ourense</option>
+                        <option>Palencia</option>
+                        <option>Pontevedra</option>
+                        <option>Salamanca</option>
+                        <option>Segovia</option>
+                        <option>Sevilla</option>
+                        <option>Soria</option>
+                        <option>Tarragona</option>
+                        <option>Santa Cruz de Tenerife</option>
+                        <option>Teruel</option>
+                        <option>Toledo</option>
+                        <option>Valencia</option>
+                        <option>Valladolid</option>
+                        <option>Vizcaya</option>
+                        <option>Zamora</option>
+                        <option>Zaragoza</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label>Teléfono</label>
+                <input type="text" id="ajuste-telefono">
+            </div>
+
+            <div class="campo redes-sociales">
+                <label>Redes sociales</label>
+
+                <div class="social-add">
+                    <select id="social-type">
+                        <option value="instagram">Instagram</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="twitter">Twitter / X</option>
+                        <option value="linkedin">LinkedIn</option>
+                    </select>
+
+                    <input type="url" id="social-url" placeholder="https://...">
+
+                    <button type="button" id="add-social">Añadir</button>
+                </div>
+
+                <ul id="social-list" class="social-list"></ul>
+            </div>
+
+            <div class="campo campo-intereses">
+                <label>Intereses</label>
+                <div class="intereses">
+                    <label class="interes" data-value="Música"><img src="../imagenes/music_5662049.png"> Música</label>
+                    <label class="interes" data-value="Deportes"><img src="../imagenes/sports_857492.png"> Deportes</label>
+                    <label class="interes" data-value="Viajes"><img src="../imagenes/airplane_1358696.png"> Viajes</label>
+                    <label class="interes" data-value="Cine"><img src="../imagenes/cinema_469932.png"> Cine</label>
+                    <label class="interes" data-value="Fiesta"><img src="../imagenes/confetti_5003057.png"> Fiesta</label>
+                    <label class="interes" data-value="Fotografía"><img src="../imagenes/photo-camera_2458574.png"> Fotografía</label>
+                    <label class="interes" data-value="Networking"><img src="../imagenes/network_881930.png"> Networking</label>
+                    <label class="interes" data-value="Otros"><img src="../imagenes/more_5976816.png"> Otros</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-guardar">Guardar cambios</button>
+        </form>
+    </div>
+
+</section>
+
+
+
+    </main>
+
+    </div> <!-- cierre container -->
+
+    <script src="../js/auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

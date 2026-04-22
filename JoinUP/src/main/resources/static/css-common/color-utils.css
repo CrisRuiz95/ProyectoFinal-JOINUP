@@ -1,0 +1,40 @@
+/* ========================
+   COLORES
+======================== */
+
+.color-green {
+    color: #38B2AC;
+}
+
+.color-blue {
+    color: #4B6DA7;
+}
+
+
+.color-gray {
+    color: #B1B1B1;
+}
+
+.color-yellow {
+    color: #F6AD55;
+}
+
+.color-black {
+    color: #000000;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-green {
+    background-color: #38B2AC;
+}
+
+.bg-gray {
+    background-color: #B1B1B1;
+}
+
+.bg-yellow {
+    background-color: #F6AD55;
+}

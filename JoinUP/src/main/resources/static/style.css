@@ -1,0 +1,980 @@
+@font-face {
+  font-family: "Modern"; 
+  src: url("fuentes/ModernAesthetic-DemoVersion-Regular.otf");
+}
+
+@font-face {
+    font-family: "Actor" ;
+    src: url("fuentes/Actor-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat" ;
+    src: url("fuentes/MontserratAlternates-Regular.ttf");
+}
+@font-face {
+    font-family: "Montserrat bold" ;
+    src: url("fuentes/MontserratAlternates-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("fuentes/Oswald-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("fuentes/Quicksand-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Staatliches" ;
+    src: url("fuentes/Staatliches-Regular.ttf");
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: "Actor", sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    background-color: var(--fondo-principal);    
+}
+
+/* GLOBALES */
+h1, h2, h3 {
+    font-family: "Montserrat bold" , serif;
+    margin: 0 0 0 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+:root{
+  --fondo-principal: #4B6DA7;
+  --texto-principal: #2D3748;
+  --color-marca: #38B2AC;
+  --botones: #F6AD55;
+  --boton-secundario: #FB7D6D;
+  --fondo-secundario: #F5F9FA;
+}
+
+
+/********* HERO IMAGE**************/
+#encabezado {
+    width: 100%;
+    height: 125rem;  
+}
+.hero {
+    height: 125rem;
+    width: 100%;  
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* Hemos redimensionado la imagen a pantalla de portatil */
+    background-image: linear-gradient(to bottom, var(--fondo-principal) 10%, #ffffff00 80%), url(imagenes/heroimageR.jpg);
+    background-size: cover;
+}
+.hero-contenido h1 {
+    color: white;
+    font-size: 10rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: "Montserrat bold";
+    margin-left: 8rem;
+    padding-top: 10rem;
+}
+.hero-descripcion {
+    color: white;
+    font-family: "Montserrat bold";
+    font-size: 4rem;
+    margin-left: 12rem;
+    width: 40rem;
+    text-align: center;
+    margin-left: 185rem;
+    margin-top: 40rem;
+    line-height: 1.5;
+    
+}
+.segunda-linea {
+    display: block;
+    margin-top: -5rem;
+}
+
+
+/* MENU Y LOGO */
+#logo{
+    width: 13rem;
+    height: auto;
+    margin: 0 5rem;
+}
+#cuentaIcono {
+    width: 8rem;
+    height: auto;
+    margin: 0 10rem 0 0;
+    cursor: pointer;
+}
+#navbar {
+    position: fixed;
+    height: 17rem;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.403);
+    border-radius: 0 0 40px 40px;
+    transition: top 0.6s ease-in-out; /* para que el scroll del JS sea más suave */
+    z-index: 1000;
+    top:0;
+}
+.contenedor-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+.contenedor-derecho,
+.contenedor-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.elementoMenu a {
+    color: var(--fondo-principal);
+    font-family: "Modern";
+    font-size: 3rem;
+    margin: 0 2rem;
+}
+
+@media (max-width: 1920px) { 
+    
+/********* HERO IMAGE**************/
+#encabezado {
+    height: 90rem;  
+}
+.hero {
+    height: 90rem;
+}
+.hero-contenido h1 {
+    font-size: 7.5rem;
+    margin-left: 8rem;
+    padding-top: 9rem;
+}
+.hero-descripcion {
+    font-size: 3rem;
+    width: 30rem;
+    text-align: center;
+    margin-left: 145rem;
+    margin-top: 25rem;
+    
+}
+.segunda-linea {
+    display: block;
+    margin-top: -5rem;
+}
+
+/***** MENU Y LOGO ************/
+#logo{
+    width: 10rem;
+    height: auto;
+    margin: 0 5rem;
+}
+#cuentaIcono {
+    width: 6rem;
+    height: auto;
+    margin: 0 10rem 0 1rem
+}
+#navbar {
+    height: 13.5rem;
+}
+.contenedor-derecho,
+.contenedor-izquierda {
+    gap: 0.2rem;
+}
+.elementoMenu a {
+    font-size: 2.5rem;
+    margin: 0 2rem;
+}
+} /* CIERRE DEL MQ DE 1920*/
+
+
+@media (max-width: 1440px) { 
+  /********* HERO IMAGE**************/
+#encabezado {
+    height: 80rem;  
+}
+.hero {
+    height: 80rem;
+}
+.hero-contenido h1 {
+    font-size: 6rem;
+}
+.hero-descripcion {
+    font-size: 3rem;
+    width: 30rem;
+    margin-left: 105rem;
+    margin-top: 20rem;
+}
+
+/***** MENU Y LOGO ************/
+#logo{
+    width: 10rem;
+    height: auto;
+    margin: 0 5rem;
+}
+#cuentaIcono {
+    width: 6rem;
+    height: auto;
+    margin: 0 10rem 0 1rem
+}
+#navbar {
+    height: 12rem;
+}
+.contenedor-derecho,
+.contenedor-izquierda {
+    gap: 3rem;
+}
+.elementoMenu a {
+    font-size: 2.2rem;
+    margin: -2rem 1rem 0 0;
+}
+} /* MAC */ 
+
+/****************************** MAIN ****************************************************/
+#fondo-secundario {
+    width: 95%;
+    height: 560rem;
+    background-color: var(--fondo-secundario);
+    margin: 12rem auto;
+    padding: 4rem 4rem;
+    border-radius: 2rem;
+    }
+
+    @media (max-width: 1920px ) { 
+#fondo-secundario {
+    height: 480rem;
+}
+} 
+     @media (max-width: 1440px ) { 
+#fondo-secundario {
+    height: 435rem;
+} 
+}
+
+/* COMO FUNCIONA */ 
+h2 {
+  color: var(--color-marca);
+  font-size: 10rem;
+  font-weight: lighter;
+  margin-top: 9rem;
+  margin-bottom: 9rem;
+  font-family: 'Staatliches';
+  text-align: center;
+}
+
+.icono img{
+    height: 9.7rem;
+    width: 9.7rem;
+}
+.tarjetas {
+  display: flex;
+  justify-content: center;
+  gap: 30rem;
+  font-family: "Actor";
+}
+
+.tarjeta {
+  background-color: white;
+  border-radius: 2rem;
+  border: 2px solid #CDCDCD;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.582);
+  width: 50rem;
+  height: 50rem;
+  padding: 3rem 2rem;
+  transition: transform 0.3s ease;
+  margin-bottom: 10rem;
+}
+
+.tarjeta:hover {
+  transform: translateY(-10px);
+}
+
+.icono {
+  background-color: #f2f6f7;
+  width: 13rem;
+  height: 13rem;
+  margin: 0 auto 0.7rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarjeta h3 {
+  font-size: 3.5rem;
+  font-family: "Modern";
+  text-align: center;
+  font-weight: lighter;
+}
+
+.tarjeta p {
+  color: #333;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  font-family: "Actor";
+  text-align: center;
+}
+
+@media (max-width: 1920px) { 
+.tarjetas {
+  gap: 12rem;
+}
+.icono img{
+    height: 8.5rem;
+    width: 8.5rem;
+}
+.icono {
+  width: 11rem;
+  height: 11rem;
+}
+.tarjeta {
+  width: 40rem;
+  height: 40rem;
+  padding: 3rem 2rem;
+}
+.tarjeta h3 {
+  font-size: 2.9rem;
+}
+.tarjeta p {
+  color: #333;
+  font-size: 2.3rem;
+}
+}
+@media (max-width: 1440px) { 
+.tarjetas {
+  gap: 5rem;
+}
+.icono img{
+    height: 5rem;
+    width: 5rem;
+}
+.icono {
+  width: 8rem;
+  height: 8rem;
+}
+.tarjeta {
+  width: 35rem;
+  height: 35rem;
+  padding: 3rem 2rem;
+}
+.tarjeta h3 {
+  font-size: 2.5rem;
+}
+.tarjeta p {
+  color: #333;
+  font-size: 1.9rem;
+}
+}
+
+/*CREAR EVENTO */
+#crear-eventos p, #buscar-eventos p {
+    font-family: "Modern";
+    font-size: 3rem;
+    text-align: center;
+    margin-top: -5rem;
+}
+.video-container{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    max-width: 150rem; 
+    margin: 0 auto;
+    position: relative;  
+}
+
+.video-container video,
+.video-container .boton-ce {
+    grid-area: 1 / 1;
+}
+
+video{
+    width: 100%;
+    height: auto;
+    display: block; 
+}
+
+.boton-ce{
+    align-self: start;    
+    margin-top: 4rem;      
+    background-color: var(--botones);
+    color: white;
+    border: none;
+    width: 25rem;
+    height: 8rem;
+    font-size: 2.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 10;      
+    font-family: "Modern";  
+    transition: all 0.5s ease;  
+}
+.boton-ce:hover{
+    background-color: var(--boton-secundario);
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 1920px) { 
+#crear-eventos p, #buscar-eventos p {
+    font-size: 2.5rem;
+    margin-top: -8rem;
+}
+.video-container{
+    max-width: 115rem; 
+}
+.boton-ce{
+    width: 23rem;
+    height: 7rem;
+    font-size: 2rem;
+}
+} 
+
+@media (max-width: 1440px) { 
+#crear-eventos p, #buscar-eventos p {
+    font-size: 2rem;
+    margin-top: -7.5rem;
+}
+.video-container{
+    max-width: 100rem; 
+}
+.boton-ce{
+    width: 20rem;
+    height: 6rem;
+    font-size: 1.5rem;
+}
+} 
+
+/* BUSCAR EVENTOS - CARRUSEL */
+#carrusel {
+      position: relative;
+      width: 150rem;     
+      height: 90rem;     
+      overflow: hidden;
+      border-radius: 1.6rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.339);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;    
+}
+
+#evento img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1.6rem;
+      display: block;
+}
+
+#carrusel button {
+      position: absolute;
+      border: none;
+      outline: none;
+      margin: 1rem;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 5;
+      background-color: #00000000;
+}
+
+#anterior {
+      left: 1.5rem; 
+}
+
+#siguiente {
+      right: 1.5rem; 
+}
+
+#carrusel button img {
+      width: 10rem;
+      height: 10rem;
+      filter: invert(63%) sepia(87%) saturate(648%) hue-rotate(7deg) brightness(99%) contrast(97%);
+}
+
+#carrusel button:hover img {
+    filter: invert(48%) sepia(84%) saturate(439%) hue-rotate(343deg) brightness(100%) contrast(100%);
+}
+
+.boton-be{
+    position: relative;
+    top: 25px;
+    left: 43%;
+    display: flex;                 
+    align-items: center;            
+    justify-content: center;                    
+    background-color: var(--botones);
+    border: none;
+    width: 25rem;
+    height: 8rem;
+    font-size: 2.2rem;
+    border-radius: 5rem;
+    z-index: 20;
+    cursor: pointer;   
+    transition: all 0.5s ease;
+    margin-bottom: 15rem;
+}
+.boton-be:hover{
+    background-color: var(--boton-secundario);
+}
+.boton-be span {
+  color: white;
+  font-family: "Modern";
+}
+.boton-be img{
+  width: 4;
+  height: 40px;
+  margin-left: -10px; 
+}
+
+@media (max-width: 1920px ) { 
+#carrusel {
+  width: 120rem;     
+  height: 70rem;     
+ 
+}
+.boton-be{
+    top: 25px;
+    left: 45%;
+    display: flex;                 
+    width: 20rem;
+    height: 7.5rem;
+    font-size: 18px;
+}
+.boton-be img{
+  width: 30px;
+  height: 30px;
+  margin-left: -10px; 
+}
+} 
+
+ 
+@media (max-width: 1440px ) { 
+#carrusel {
+  width: 100rem;     
+  height: 60rem;     
+}
+.boton-be{
+    top: 25px;
+    left: 45%;
+    display: flex;                 
+    width: 20rem;
+    height: 7.5rem;
+    font-size: 18px;
+}
+.boton-be img{
+  width: 30px;
+  height: 30px;
+  margin-left: -10px; 
+}
+
+#carrusel button img {
+      width: 8rem;
+      height: 8rem;
+}
+} 
+
+
+/* CONTACTO */
+
+.contacto-contenido {
+  display: flex;
+  justify-content: center;
+  gap: 25rem;
+  margin: 0 7rem;
+}
+.contacto-imagen{
+  width: 85rem;
+  height: 85rem;
+  
+}
+.contacto-imagen img {
+  border-radius: 12px;
+  max-width: 100%;
+  display: block;
+}
+
+.contacto-formulario {
+  display: flex;
+  margin-top: 5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60.4rem;
+  text-align: left;
+  font-size: 3rem;
+}
+
+.contacto-formulario label {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contacto-formulario textarea {
+  width: 100%;
+  padding: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 2.5rem;  
+}
+
+.contacto-formulario input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 2rem;
+}
+
+.contacto-texto {
+  font-size: 2rem;
+  margin: 3rem 0 3rem;
+  text-align: center;
+  font-family: "Modern";
+}
+
+.campo-archivo{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#borrar-archivo {
+  background-color: transparent;
+  color: var(--boton-secundario); 
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  text-decoration: underline;
+
+}
+
+.borrar-archivo:hover {
+  color: var(--botones);
+}
+
+.boton-enviar {
+  position: relative;
+  background-color: var(--botones);
+  color: white;
+  border: none;
+  padding: 1.6rem 4rem;
+  border-radius: 4rem;
+  font-size: 2.5rem;
+  width: 28rem;
+  height: 9rem;
+  cursor: pointer;
+  font-family: "Modern";
+  top: 15rem;
+  right: 50%;
+  transition: all 0.5s ease;
+}
+
+.boton-enviar:hover {
+  background-color: var(--boton-secundario);
+}
+ @media (max-width: 1920px ) { 
+.contacto-contenido {
+  gap: 20rem;
+}
+.contacto-imagen{
+  width: 75rem;
+  height: 75rem;
+  
+}
+.contacto-formulario {
+  margin-top: 1.5rem;
+  width: 55rem;
+  font-size: 2.5rem;
+}
+.contacto-formulario textarea {
+  padding: 1.2rem;
+  font-size: 2rem;  
+}
+} 
+
+@media (max-width: 1440px) { 
+.contacto-contenido {
+  gap: 15rem;
+}
+.contacto-imagen{
+  width: 70rem;
+  height: 70rem;
+}
+.contacto-formulario {
+  margin-top: 0.5rem;
+  width: 50rem;
+  font-size: 2rem;
+}
+.contacto-formulario textarea {
+  padding: 1rem;
+  font-size: 1.7rem;  
+}
+.contacto-texto{
+  font-size: 1.5rem;
+}
+.boton-enviar {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  width: 20rem;
+  height: 7rem;
+  top: 10rem;
+  right: 50%;
+}   
+ } 
+/************** FOOTER **************/
+
+footer {
+  color: #000;
+  height: 40rem;
+}
+
+.footer-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -12rem;
+}
+
+/*  Opiniones */
+.footer-col .opiniones{
+  font-family: "Actor";
+  font-size: 2.5rem;
+  font-weight: lighter;
+  text-align: left;
+  margin-top: -10rem;
+}
+
+.trustpilot {
+  width: 35rem;
+  margin-top: -1rem;
+  margin-left: -1.5rem;
+}
+
+/*  Redes sociales  */
+.footer-col .tituloFooter{
+  font-family: "Modern";
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: lighter;
+  margin-top: -13rem;
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 2rem
+}
+
+.redes-sociales img {
+  width: 65px;
+  height: 65px;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+.redes-sociales img:hover {
+  transform: scale(1.5);
+  filter: brightness(0) invert(1);
+}
+/* Información  */
+
+.footer-col h4{
+  font-family: "Staatliches";
+  font-weight: lighter;
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 1rem;
+}
+
+.footer-col ul li a {
+  color: #000;
+  font-family: "Actor";
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1.5em;
+  line-height: 0.5;
+}
+
+.footer-col ul li a:hover {
+  color: var(--color-marca)
+}
+
+.footer-col p{
+  font-family: "Modern";
+  font-weight: lighter;
+  margin-bottom: 1rem;
+  text-align: center;
+  line-height: 0.5;
+}
+.ic img{
+  width: 20px;
+  height: auto;
+}
+.footer-col .ic{
+   font-family: "Actor";
+   font-size: 1.25em;
+}
+
+/* Suscripción  */
+
+.suscripcion-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.suscripcion-footer{
+  margin-top: -30px;
+}
+
+.suscripcion-footer p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.suscripcion-form input[type="email"] {
+  width: 32rem;
+  height: 5rem;
+  padding: 1rem;
+  border: #575757;
+  border-radius: 6px;
+  background-color: #989898; 
+  text-align: center;
+  font-family: "Modern";
+  margin-bottom: 1rem;
+}
+
+.suscripcion-form ::placeholder {
+  color: white;
+  font-size: 1.2em;
+}
+
+.checkbox {
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+.checkbox a {
+  color: var(--color-marca);
+  text-decoration: none;
+}
+
+.checkbox a:hover {
+  text-decoration: underline;
+  color: var(--boton-secundario);
+}
+
+.btn-suscripcion{
+  display: flex ;
+  justify-content: center;
+}
+.suscripcion-form button {
+  background-color: var(--botones);
+  color: white;
+  border: none;
+  width: 25rem;
+  height: 5rem;
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: "Modern";
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+.suscripcion-form button:hover {
+  background-color: var(--boton-secundario);
+}
+
+@media (max-width: 1440px) { 
+/*  Opiniones */
+.footer-col .opiniones{
+  font-size: 2.2rem;
+}
+
+.trustpilot {
+  width: 30rem;
+  margin-top: 0rem;
+}
+/*  Redes sociales  */
+.footer-col .tituloFooter{
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+.redes-sociales {
+  display: flex;
+  gap: 0.8rem
+}
+.redes-sociales img {
+  width: 6rem;
+  height: 6rem;
+}
+/* Información  */
+.footer-col h4{
+  font-size: 2.3rem;
+  margin-bottom: 0.7rem;
+}
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+.footer-col p{
+  margin-bottom: 0.5rem;
+  line-height: 0.2;
+}
+.ic img{
+  width: 15px;
+  height: auto;
+}
+.footer-col .ic{
+   font-family: "Actor";
+   font-size: 1.7rem;
+}
+
+/* Suscripción  */
+.suscripcion-footer p {
+  font-size: 1.3rem;
+  margin-bottom: 1.8rem;
+}
+.suscripcion-form input[type="email"] {
+  width: 30rem;
+  height: 5rem;
+  margin-bottom: 1rem;
+}
+.suscripcion-form ::placeholder {
+  font-size: 1.5rem;
+}
+.checkbox {
+  font-size: 1.3rem;
+}
+.suscripcion-form button {
+  width: 20rem;
+  height: 4rem;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
+.footer-col:nth-child(1),
+.footer-col:nth-child(2) {
+  margin-top:5rem
+}
+ } 

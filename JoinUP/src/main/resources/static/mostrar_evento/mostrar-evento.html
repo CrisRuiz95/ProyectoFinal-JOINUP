@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar evento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+		<header class="w-100 m-0 pl-5 row bg-white align-center rounded-br-2xl rounded-bl-2xl">
+	    <div class="col-1">
+	        <img src="img/logo.png" alt="JoinUp" height="100px">
+	    </div>
+				
+				<!-- MENÚ CENTRADO -->
+	    <nav class="col-2 ml-5 pl-5 text-xl">
+	        <a href="../index.html" class="font-modern color-blue">Home</a>
+	    </nav>
+				<div class="col"></div>
+				<!-- MI CUENTA -->
+	    <div class="col-2">
+	        <a href="../area_personal/usuario.html" class="d-flex align-center gap-1">
+		          <span class="font-modern color-blue text-xl">Mi cuenta</span>
+	            <img class="ml-4" src="img/user-icon.png" alt="" height="50px">
+	        </a>
+	    </div>
+
+		</header>.
+		
+		<div class="row mx-6 my-3 bg-white rounded-lg">
+			<div class="col">
+				<div class="row">
+					<div class="col d-flex align-center justify-center">
+						<span class="font-staatliches color-green text-title">EVENTO</span>
+					</div>
+				</div>
+				<div class="row mx-6 py-3 bg-white rounded-lg justify-between">
+					<div class="col-3"></div>
+					<div class="col-5">
+						<div class="row">
+							<div class="col">
+								<div class="card-evento">
+									<div class="label">gratuito</div>
+								  <img src="img/restaurant.png" alt="Imagen del evento">
+								
+								  <div class="card-evento-body">
+								    <h2 class="card-evento-titulo">Cena en el restaurante Sibuya</h2>
+								
+								    <p class="card-evento-descripcion">
+								      Se busca grupo amigable y divertido para compartir una cena en este restaurante
+								    </p>
+								
+								    <div class="card-evento-info mx-4">
+								      <div class="card-evento-fila">
+								        <img src="img/calendar-icon.png" alt="" class="card-evento-icono">
+								        <span class="font-actor">21:30 2 abril, 2025</span>
+								      </div>
+								
+								      <div class="card-evento-fila">
+								        <img src="img/map-point-icon.png" alt="" class="card-evento-icono">
+								        <span class="font-actor">Zamora</span>
+								      </div>
+								    </div>
+									  
+									  <div class="card-evento-info mx-4">
+								      <div class="card-evento-fila">
+								        <img src="img/people-icon.png" alt="" class="card-evento-icono">
+								        <span class="font-actor">Max. 5</span>
+								      </div>
+								
+								      <div class="card-evento-fila">
+								        <img src="img/lock-icon.png" alt="" class="card-evento-icono">
+								        <span class="font-actor">Público</span>
+								      </div>
+								    </div>
+								
+								    <div class="card-evento-footer">
+									    <span></span>
+								      <button class="btn-joinup bg-green ml-4 text-xl font-modern">&nbsp;&nbsp;&nbsp;Unirse&nbsp;&nbsp;&nbsp;</button>
+								      <button class="card-evento-favorito" aria-label="Guardar evento">
+								        <img class="card-evento-favorito-icono p-0 m-0" src="img/fav-icon.png" alt=""  >
+								      </button>
+								    </div>
+								  </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+				<div class="row mx-4 mt-3 justify-center panel">
+					<div class="col">
+						<div class="row">
+							<div class="col d-flex justify-center">
+								<span class="font-staatliches color-green text-title">VALORACIONES</span>
+							</div>
+						</div>
+						<form action="">
+							<div class="row">
+							<div class="col">
+								<div class="row justify-around">
+									<div class="col-3">
+										<p class="rating-title">Tu valoración:</p>
+										
+										<div class="rating-wrapper">
+										  <div class="stars"></div>
+										
+										  <input
+												  name="stars"
+												  type="range"
+												  class="rating-range"
+												  min="0"
+												  max="5"
+												  step="0.5"
+												  value="0"
+										  >
+											</div>
+									</div>
+									<div class="col-3">
+										<p class="rating-title">Valoracion media:</p>
+										
+										<div class="rating-wrapper rating-disabled">
+										  <div class="stars"></div>
+										
+										  <input
+												  type="range"
+												  class="rating-range"
+												  min="0"
+												  max="5"
+												  step="0.5"
+												  value="4.5"
+										  >
+											</div>
+									</div>
+									</div>
+								<div class="row mt-2 justify-center">
+									<div class="col-8 d-flex justify-center">
+										<textarea class="input-joinup mx-5" name="comentario" placeholder="Escribe tu opinión o experiencia..." rows="4" cols="50"></textarea>
+									</div>
+								</div>
+								<div class="row justify-center">
+									<div class="col d-flex justify-center">
+										<button class="btn-joinup bg-yellow ml-4 p-3 text-xl font-modern rounded-sm">Publicar / Cambiar</button>
+									</div>
+								</div>
+								</div>
+							</div>
+						</form>
+						</div>
+					</div>
+				<div class="row mx-4 mt-5 mb-5 justify-center panel">
+					<div class="col">
+						<div class="row">
+							<div class="col d-flex justify-center">
+								<span class="font-staatliches color-green text-title">OPINIONES Y COMENTARIOS</span>
+							</div>
+						</div>
+						<div class="row justify-center mb-3">
+							<div class="col-1">
+								<img src="img/users/2.png" width="83" alt="Imagen del evento">
+							</div>
+							<div class="col-8">
+								<div class="row justify-between">
+									<div class="col font-modern">
+										Lara
+									</div>
+									<div class="col-2 font-actor color-gray">
+										3 abril, 2025
+									</div>
+								</div>
+								<div class="row">
+									<div class="col font-actor">
+										Muy buen ambiente y comida recomendada.  Los acompañantes muy sociables y pasamos una buena noche.
+									</div>
+								</div>
+								<div class="row justify-between">
+									<div class="col-3">
+										<img src="img/star-fill.png" width="24" height="24" alt="">
+										<img src="img/star-fill.png" width="24" height="24" alt="">
+										<img src="img/star-fill.png" width="24" height="24" alt="">
+										<img src="img/star-fill.png" width="24" height="24" alt="">
+										<img src="img/star-empty.png" width="24" height="24" alt="">
+									</div>
+									<div class="col-1">
+										<button class="card-evento-favorito" aria-label="Guardar evento">
+								        <img src="img/like.png" width="24" height="24" alt=""  >
+										</button>
+										<button class="card-evento-favorito" aria-label="Guardar evento">
+								        <img src="img/dislike.png" width="24" height="24" alt=""  >
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row justify-center mb-3">
+							<div class="col-1">
+								<img src="img/users/3.png" width="83" alt="Imagen del evento">
+							</div>
+							<div class="col-8">
+								<div class="row justify-between">
+									<div class="col font-modern">
+										Marta
+									</div>
+									<div class="col-2 font-actor color-gray">
+										3 abril, 2025
+									</div>
+								</div>
+								<div class="row">
+									<div class="col font-actor">
+										Disfruté mucho de la cena y de la compañía, volvería a repetir ¡sin ninguna duda!
+									</div>
+								</div>
+								<div class="row justify-between">
+									<div class="col-3">
+										<img src="img/star-fill.png" width="24" height="24" alt="">
+										<img src="img/star-fill.png" width="24" height="24" alt="">
+										<img src="img/star-fill.png" width="24" height="24" alt="">
+										<img src="img/star-fill.png" width="24" height="24" alt="">
+										<img src="img/star-fill.png" width="24" height="24" alt="">
+									</div>
+									<div class="col-1">
+										<button class="card-evento-favorito" aria-label="Guardar evento">
+								        <img src="img/like.png" width="24" height="24" alt=""  >
+										</button>
+										<button class="card-evento-favorito" aria-label="Guardar evento">
+								        <img src="img/dislike.png" width="24" height="24" alt=""  >
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row justify-center mb-3">
+							<div class="col-1">
+								<img src="img/users/4.png" width="83" alt="Imagen del evento">
+							</div>
+							<div class="col-8">
+								<div class="row justify-between">
+									<div class="col font-modern">
+										Luis
+									</div>
+									<div class="col-2 font-actor color-gray">
+										4 abril, 2025
+									</div>
+								</div>
+								<div class="row">
+									<div class="col font-actor">
+										La cena fue muy agradable. Carlos, el creador del evento, ¡nos invitó a un chupito de sake a todos!
+									</div>
+								</div>
+								<div class="row justify-between">
+									<div class="col-3">
+										<img src="img/star-fill.png" width="24" height="24" alt="">
+										<img src="img/star-fill.png" width="24" height="24" alt="">
+										<img src="img/star-fill.png" width="24" height="24" alt="">
+										<img src="img/star-fill.png" width="24" height="24" alt="">
+										<img src="img/star-fill.png" width="24" height="24" alt="">
+									</div>
+									<div class="col-1">
+										<button class="card-evento-favorito" aria-label="Guardar evento">
+								        <img src="img/like.png" width="24" height="24" alt=""  >
+										</button>
+										<button class="card-evento-favorito" aria-label="Guardar evento">
+								        <img src="img/dislike.png" width="24" height="24" alt=""  >
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		<script src="script.js"></script>
+</body>
+</html>

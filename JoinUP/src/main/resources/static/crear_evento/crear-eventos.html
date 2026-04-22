@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea Eventos</title>
+    <link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+		<header class="w-100 m-0 pl-5 row bg-white align-center rounded-br-2xl rounded-bl-2xl">
+	    <div class="col-1">
+	        <img src="img/logo.png" alt="JoinUp" height="100px">
+	    </div>
+				
+				<!-- MENÚ CENTRADO -->
+	    <nav class="col-2 ml-5 pl-5 text-xl">
+	        <a href="../index.html" class="font-modern color-blue">Home</a>
+	    </nav>
+				<div class="col"></div>
+				<!-- MI CUENTA -->
+	    <div class="col-2">
+	        <a href="../area_personal/usuario.html" class="d-flex align-center gap-1" id="cuentaLink">
+		          <span class="font-modern color-blue text-xl">Mi cuenta</span>
+	            <img class="ml-4" src="img/user-icon.png" alt="" height="50px" id="cuentaIcono">
+	        </a>
+	    </div>
+
+		</header>
+
+		<div class="row">
+			<div class="col m-0 p-0">
+				 <img class="img-responsive px-5 m-0" src="img/momentos.png" alt="">
+			</div>
+		</div>
+		
+		<div class="row mx-6 my-3 bg-white rounded-lg">
+			<div class="col d-flex align-center justify-center">
+				 <span class="font-staatliches color-green text-title">CREA EVENTOS</span>
+			</div>
+		</div>
+		
+		<div class="row mx-6 justify-center">
+					<form class="col mr-2 p-4 bg-white rounded-lg" id="formCrearEvento">
+					
+						<div class="row mb-3">
+							<div class="col">
+								<h1 class="font-modern">Formulario rápido</h1>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-8">
+								<label class="font-actor" for="nombreEvento">Nombre del evento</label>
+								<input class="input-joinup" type="text" name="nombreEvento" id="nombreEvento">
+							</div>
+						</div>
+						<div class="row mt-2">
+							<div class="col-3">
+								<label class="font-actor" for="categoriaEvento">Categoría</label>
+								<br>
+								<select class="input-joinup" name="categoriaEvento" id="categoriaEvento">
+								  <option value="Música">Música</option>
+								  <option value="Deportes">Deportes</option>
+								  <option value="Viajes">Viajes</option>
+								  <option value="Cine">Cine</option>
+								  <option value="Fiesta">Fiesta</option>
+								  <option value="Fotografía">Fotografía</option>
+								  <option value="Networking">Networking</option>
+								  <option value="Otros" selected>Otros</option>
+								</select>
+							</div>
+						</div>
+						<div class="row mt-2">
+							<div class="col-2">
+								<span class="font-actor">Fecha y hora</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-3">
+								<input class="input-joinup" type="date" name="" id="fechaEvento">
+							</div>
+							<div class="col-2 ml-2">
+								<input class="input-joinup" type="time" name="" id="horaEvento">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<span class="font-actor">Ubicación</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="rounded-xl" id="map" style="height: 200px;"></div>
+								<!-- inputs ocultos para guardar la ubicación -->
+							  <input type="hidden" name="lat" id="lat">
+							  <input type="hidden" name="lng" id="lng">
+							</div>
+						</div>
+						<div class="row">
+						  <div class="col-8">
+						    <label class="font-actor" for="imagenEvento">Imagen del evento</label>
+						
+						    <label for="imagenEvento"
+						           class="input-joinup d-flex align-center gap-2 cursor-pointer"
+						           style="position: relative;">
+						      <!-- Icono izquierda -->
+						      <img src="img/image-icon.png" alt="Foto" style="height:20px;">
+							    
+							    <!-- Texto centro: aquí se actualiza el nombre del archivo -->
+						      <span  class="color-gray ml-2">Foto: <span id="nombre-imagen">Adjuntar foto</span></span>
+							    
+							    <!-- Icono clip derecha -->
+						      <img src="img/clip-icon.png" alt="Adjuntar" style="height:18px; margin-left:auto;">
+							    
+							    <!-- Input real -->
+						      <input type="file"
+						             id="imagenEvento"
+						             name="imagenEvento"
+						             accept="image/*"
+						             style="position:absolute; inset:0; opacity:0; cursor:pointer;"
+						      >
+					    </label>
+					  </div>
+					</div>
+					<div class="row mt-2">
+						<div class="col d-flex justify-end">
+							<button class="btn-joinup bg-green font-modern text-xl" type="button" id="btnContinuarPaso1">Continuar</button>
+						</div>
+					</div>
+			</form>
+			<form class="col ml-2 p-4 bg-white rounded-lg d-flex flex-column">
+						<div class="row mb-3">
+							<div class="col">
+								<h1 class="font-modern">Vista de detalles</h1>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<label class="font-actor" for="descripcionEvento">Descripción del evento</label>
+								<textarea class="input-joinup" name="descripcionEvento" id="descripcionEvento"  rows="6" cols="40"></textarea>
+							</div>
+						</div>
+						<div class="row mt-2">
+							<div class="col">
+								<label class="font-actor" for="maxAsistentesEvento">Número máximo de asistentes</label>
+								<br>
+								<input class="input-joinup w-15" type="number" name="maxAsistentesEvento" id="maxAsistentesEvento">
+								
+							</div>
+						</div>
+						<div class="row">
+						  <div class="col">
+						    <p class="font-actor mb-2">Opciones de acceso</p>
+						
+						    <label class="radio-joinup">
+						      <input type="radio" name="acceso" value="gratuito" checked>
+						      <span class="font-actor">Gratuito</span>
+						    </label>
+						
+						    <label class="radio-joinup">
+						      <input type="radio" name="acceso" value="pago">
+						      <span class="font-actor">De pago</span>
+						    </label>
+
+							<!-- Por ahora el tema de la privacidad de los eventos no se incluye en el proyecto-->
+						    <!-- <p class="font-actor mt-3 mb-2">Privacidad</p>
+						
+						    <label class="radio-joinup">
+						      <input type="radio" name="privacidad" value="publico" checked>
+						      <span class="font-actor">Público</span>
+						    </label>
+						
+						    <label class="radio-joinup">
+						      <input type="radio" name="privacidad" value="privado">
+						      <span class="font-actor">Privado</span>
+						    </label> -->
+						  </div>
+						</div>
+						<div class="row row-bottom">
+							<div class="col d-flex justify-end">
+								<button class="btn-joinup bg-gray font-modern text-xl" type="button" id="btnGuardarBorrador">Guardar borrador</button>
+								<button class="btn-joinup bg-green font-modern text-xl ml-4" type="button" id="btnContinuar">Continuar</button>
+							</div>
+						</div>
+				</form>
+		</div>
+		<div class="row mx-6 py-3 mt-3 bg-white rounded-lg justify-between">
+			<div class="col-3"></div>
+			<div class="col-4">
+				<div class="row px-5 mb-3">
+					<div class="col d-flex justify-center">
+						<h1 class="font-modern">Resumen</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="card-evento">
+						  <img src="img/restaurant.png" alt="Imagen del evento" class="card-evento__img" id="previewImagen">
+						
+						  <div class="card-evento-body">
+						    <h2 class="card-evento-titulo" id="previewTitulo">Cena en el restaurante Sibuya</h2>
+						
+						    <p class="card-evento-descripcion" id="previewDescripcion">
+						      Se busca grupo amigable y divertido para compartir una cena en este restaurante
+						    </p>
+						
+						    <div class="card-evento-info">
+						      <div class="card-evento-fila">
+						        <img src="img/calendar-icon.png" alt="" class="card-evento-icono">
+						        <span class="font-actor" id="previewFecha">2 abril, 2025</span>
+						      </div>
+						
+						      <div class="card-evento-fila">
+						        <img src="img/map-point-icon.png" alt="" class="card-evento-icono">
+						        <span class="font-actor" id="previewUbicacion">Zamora</span>
+						      </div>
+						    </div>
+						
+						    <div class="card-evento-footer">
+							    <span></span>
+						      <button class="btn-joinup bg-green ml-4 text-xl font-modern">&nbsp;&nbsp;&nbsp;Unirse&nbsp;&nbsp;&nbsp;</button>
+						      <button class="card-evento-favorito" aria-label="Guardar evento">
+						        <img class="card-evento-favorito-icono p-0 m-0" src="img/fav-icon.png" alt=""  >
+						      </button>
+						    </div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-3 d-flex flex-column align-end justify-end">
+				<button class="btn-joinup bg-yellow text-xl font-modern mx-4" type="button" id="btnPublicar">Publicar</button>
+			</div>
+		</div>
+    <script src="../js/auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

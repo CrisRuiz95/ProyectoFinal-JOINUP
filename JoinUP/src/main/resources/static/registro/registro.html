@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoinUp - Registro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/normalize.css">
+</head>
+<body>
+
+<header>
+    <div class="imagen-header">
+    <a href="../index.html"><div class="logo"> <img src="../imagenes/logotipoJOINUP.png" alt="logo"> </div></a>
+    <a class="login-link" href="../login/login.html">¿Ya tienes cuenta? Inicia sesión</a>
+    </div>
+</header>
+
+<!-- PASOS SUPERIORES -->
+<div class="circulos-pasos">
+    <div class="paso activo" id="pasoCirculo1">1</div>
+    <div class="linea"></div>
+    <div class="paso" id="pasoCirculo2">2</div>
+    <div class="linea"></div>
+    <div class="paso" id="pasoCirculo3">3</div>
+    <div class="linea"></div>
+    <div class="paso" id="pasoCirculo4">4</div>
+</div>
+
+<!-- CONTENEDOR DE LOS 4 PANELES -->
+<main class="main-grid">
+
+    <!-- PANEL 1 -->
+    <section class="panel">
+        <h2>Datos personales</h2>
+
+        <label>Nombre</label>
+        <input type="text" id="nombre">
+
+        <label>Primer apellido</label>
+        <input type="text" id="ap1">
+
+        <label>Segundo apellido</label>
+        <input type="text" id="ap2">
+
+        <label>Fecha de nacimiento</label>
+        <input type="date" id="fechaNacimiento">
+
+        <div class="ciudad-provincia">
+            <div class="cp-nombre">
+                <label>Ciudad</label>
+                <input type="text" id="ciudad">
+            </div>
+            <div class="cp-nombre">
+                <label>Provincia</label>
+                 <select id="provincia">
+                        <option value="" disabled selected>Seleccione una provincia</option>
+                        <option>A Coruña</option>
+                        <option>Álava</option>
+                        <option>Albacete</option>
+                        <option>Alicante</option>
+                        <option>Almería</option>
+                        <option>Asturias</option>
+                        <option>Ávila</option>
+                        <option>Badajoz</option>
+                        <option>Barcelona</option>
+                        <option>Burgos</option>
+                        <option>Cáceres</option>
+                        <option>Cádiz</option>
+                        <option>Cantabria</option>
+                        <option>Castellón</option>
+                        <option>Ciudad Real</option>
+                        <option>Córdoba</option>
+                        <option>Cuenca</option>
+                        <option>Girona</option>
+                        <option>Granada</option>
+                        <option>Guadalajara</option>
+                        <option>Gipuzkoa</option>
+                        <option>Huelva</option>
+                        <option>Huesca</option>
+                        <option>Illes Balears</option>
+                        <option>Jaén</option>
+                        <option>La Rioja</option>
+                        <option>Las Palmas</option>
+                        <option>León</option>
+                        <option>Lleida</option>
+                        <option>Lugo</option>
+                        <option>Madrid</option>
+                        <option>Málaga</option>
+                        <option>Murcia</option>
+                        <option>Navarra</option>
+                        <option>Ourense</option>
+                        <option>Palencia</option>
+                        <option>Pontevedra</option>
+                        <option>Salamanca</option>
+                        <option>Segovia</option>
+                        <option>Sevilla</option>
+                        <option>Soria</option>
+                        <option>Tarragona</option>
+                        <option>Santa Cruz de Tenerife</option>
+                        <option>Teruel</option>
+                        <option>Toledo</option>
+                        <option>Valencia</option>
+                        <option>Valladolid</option>
+                        <option>Vizcaya</option>
+                        <option>Zamora</option>
+                        <option>Zaragoza</option>
+                    </select>
+            </div>
+        </div>
+
+        <label>Teléfono</label>
+        <input type="text" id="telefono">
+
+        <label>Correo electrónico</label>
+        <input type="email" id="email">
+
+        <label>Contraseña</label>
+        <input type="password" id="password">
+
+        <div id="errorMensaje" style="color: red; display: none; margin: 10px 0;"></div>
+
+        <div class="btn" data-paso="2"><button class="btn-panel-uno">Confirmar</button></div>
+    </section>
+
+    <!-- PANEL 2 -->
+    <section class="panel">
+        <h2>Intereses</h2>
+        <p>Escoge tres intereses:</p>
+
+        <div class="intereses">
+            <label class="interes" data-value="Música"><img src="../imagenes/music_5662049.png"> Música</label>
+            <label class="interes" data-value="Deportes"><img src="../imagenes/sports_857492.png"> Deportes</label>
+            <label class="interes" data-value="Viajes"><img src="../imagenes/airplane_1358696.png"> Viajes</label>
+            <label class="interes" data-value="Cine"><img src="../imagenes/cinema_469932.png"> Cine</label>
+            <label class="interes" data-value="Fiesta"><img src="../imagenes/confetti_5003057.png"> Fiesta</label>
+            <label class="interes" data-value="Fotografía"><img src="../imagenes/photo-camera_2458574.png"> Fotografía</label>
+            <label class="interes" data-value="Networking"><img src="../imagenes/network_881930.png"> Networking</label>
+            <label class="interes" data-value="Otros"><img src="../imagenes/more_5976816.png"> Otros</label>
+        </div>
+
+        <div class="btn" data-paso="3"><button class="btn-panel-dos">Confirmar</button></div>
+    </section>
+
+    <!-- PANEL 3 -->
+     <section class="panel">
+        <h2>Tipo de cuenta</h2>
+
+        <label class="opcion">
+        <input type="radio" name="tipo" value="GRATUITO" checked>
+        <div class="info">
+            <strong>Gratis</strong>
+            <p>No se puede retribuir con dinero al creador.</p>
+            <p>Al crear un evento, los usuarios se inscribirán gratuitamente a tu evento</p>
+        </div>
+        </label>
+
+        <label class="opcion">
+        <input type="radio" name="tipo" value="PREMIUM">
+        <div class="info">
+            <strong>Premium</strong>
+            <p>Se puede ganar dinero con los eventos</p>
+            <p>Cuando creas un evento, puedes ponerle un precio a este y los usuarios pagarán la tasa por la inscripción</p>
+        </div>
+        </label>
+
+        <div class="btn" data-paso="4"><button class="btn-panel-tres">Confirmar</button></div>
+    </section>
+
+    <!-- PANEL 4 -->
+    <section class="panel">
+        <h2>Confirmación</h2>
+        <p class="confirmacion">Revisa todos tus datos antes de proceder a enviarlos</p>
+
+        <div id="resumenDatos"></div>
+
+        <div id="mensajeExito" style="color: green; display: none; margin: 10px 0;"></div>
+        <div id="mensajeError" style="color: red; display: none; margin: 10px 0;"></div>
+
+        <div class="btn"><button class="btn-panel-cuatro">Enviar</button></div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

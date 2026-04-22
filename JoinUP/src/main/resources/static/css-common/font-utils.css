@@ -1,0 +1,60 @@
+/* ========================
+   FUENTES
+======================== */
+@font-face {
+font-family: "Modern";
+src: url("../fuentes/ModernAesthetic-DemoVersion-Regular.otf");
+}
+
+@font-face {
+font-family: "Actor";
+src: url("../fuentes/Actor-Regular.ttf");
+}
+
+/* Puedes dejar estas fuentes si planeas usarlas en otras pantallas */
+@font-face {
+font-family: "Montserrat";
+src: url("../fuentes/MontserratAlternates-Regular.ttf");
+}
+
+@font-face {
+font-family: "Montserrat bold";
+src: url("../fuentes/MontserratAlternates-Bold.ttf");
+}
+
+@font-face {
+font-family: "Oswald";
+src: url("../fuentes/Oswald-Regular.ttf");
+}
+
+@font-face {
+font-family: "Quicksand";
+src: url("../fuentes/Quicksand-Regular.ttf");
+}
+
+@font-face {
+font-family: "Staatliches";
+src: url("../fuentes/Staatliches-Regular.ttf");
+}
+
+/* ========================
+    FUENTES DE LA APP
+======================== */
+.font-modern {
+    font-family: "Modern";
+}
+
+.font-actor {
+    font-family: "Actor";
+}
+
+.font-staatliches {
+    font-family: "Staatliches";
+}
+
+.text-xs { font-size: 12px !important; }
+.text-sm { font-size: 14px !important; }
+.text-md { font-size: 16px !important; }
+.text-lg { font-size: 18px !important; }
+.text-xl { font-size: 20px !important; }
+.text-title { font-size: 72px !important;}

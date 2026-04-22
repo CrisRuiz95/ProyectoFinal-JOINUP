@@ -1,0 +1,75 @@
+/* ============================= */
+/*   UTILIDADES DE MARGIN        */
+/* ============================= */
+:root{
+    --space-0: 0;
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 1rem;
+    --space-4: 1.5rem;
+    --space-5: 3rem;
+    --space-6: 3.5rem;
+}
+
+/* Margin general */
+.m-0{ margin:var(--space-0) }
+.m-1{ margin:var(--space-1) }
+.m-2{ margin:var(--space-2) }
+.m-3{ margin:var(--space-3) }
+.m-4{ margin:var(--space-4) }
+.m-5{ margin:var(--space-5) }
+.m-6{ margin:var(--space-6) }
+
+/* Margin top */
+.mt-0{ margin-top:var(--space-0) }
+.mt-1{ margin-top:var(--space-1) }
+.mt-2{ margin-top:var(--space-2) }
+.mt-3{ margin-top:var(--space-3) }
+.mt-4{ margin-top:var(--space-4) }
+.mt-5{ margin-top:var(--space-5) }
+.mt-6{ margin-top:var(--space-6) }
+
+/* Margin bottom */
+.mb-0{ margin-bottom:var(--space-0) }
+.mb-1{ margin-bottom:var(--space-1) }
+.mb-2{ margin-bottom:var(--space-2) }
+.mb-3{ margin-bottom:var(--space-3) }
+.mb-4{ margin-bottom:var(--space-4) }
+.mb-5{ margin-bottom:var(--space-5) }
+.mb-6{ margin-bottom:var(--space-6) }
+
+/* Margin left */
+.ml-0{ margin-left:var(--space-0) }
+.ml-1{ margin-left:var(--space-1) }
+.ml-2{ margin-left:var(--space-2) }
+.ml-3{ margin-left:var(--space-3) }
+.ml-4{ margin-left:var(--space-4) }
+.ml-5{ margin-left:var(--space-5) }
+.ml-6{ margin-left:var(--space-6) }
+
+/* Margin right */
+.mr-0{ margin-right:var(--space-0) }
+.mr-1{ margin-right:var(--space-1) }
+.mr-2{ margin-right:var(--space-2) }
+.mr-3{ margin-right:var(--space-3) }
+.mr-4{ margin-right:var(--space-4) }
+.mr-5{ margin-right:var(--space-5) }
+.mr-6{ margin-right:var(--space-6) }
+
+/* Margin X (left + right) */
+.mx-0{ margin-left:var(--space-0); margin-right:var(--space-0); }
+.mx-1{ margin-left:var(--space-1); margin-right:var(--space-1); }
+.mx-2{ margin-left:var(--space-2); margin-right:var(--space-2); }
+.mx-3{ margin-left:var(--space-3); margin-right:var(--space-3); }
+.mx-4{ margin-left:var(--space-4); margin-right:var(--space-4); }
+.mx-5{ margin-left:var(--space-5); margin-right:var(--space-5); }
+.mx-6{ margin-left:var(--space-6); margin-right:var(--space-6); }
+
+/* Margin Y (top + bottom) */
+.my-0{ margin-top:var(--space-0); margin-bottom:var(--space-0); }
+.my-1{ margin-top:var(--space-1); margin-bottom:var(--space-1); }
+.my-2{ margin-top:var(--space-2); margin-bottom:var(--space-2); }
+.my-3{ margin-top:var(--space-3); margin-bottom:var(--space-3); }
+.my-4{ margin-top:var(--space-4); margin-bottom:var(--space-4); }
+.my-5{ margin-top:var(--space-5); margin-bottom:var(--space-5); }
+.my-6{ margin-top:var(--space-6); margin-bottom:var(--space-6); }

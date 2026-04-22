@@ -1,0 +1,566 @@
+@font-face {
+  font-family: "Modern"; 
+  src: url("../fuentes/ModernAesthetic-DemoVersion-Regular.otf");
+}
+
+@font-face {
+    font-family: "Actor" ;
+    src: url("../fuentes/Actor-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat" ;
+    src: url("../fuentes/MontserratAlternates-Regular.ttf");
+}
+@font-face {
+    font-family: "Montserrat bold" ;
+    src: url("../fuentes/MontserratAlternates-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("../fuentes/Oswald-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("../fuentes/Quicksand-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Staatliches" ;
+    src: url("../fuentes/Staatliches-Regular.ttf");
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: "Actor", sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    background-color: var(--fondo-principal);    
+}
+
+/* GLOBALES */
+h1, h2, h3 {
+    font-family: "Montserrat bold" , serif;
+    margin: 0 0 0 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+:root{
+  --fondo-principal: #4B6DA7;
+  --texto-principal: #2D3748;
+  --color-marca: #38B2AC;
+  --botones: #F6AD55;
+  --boton-secundario: #FB7D6D;
+  --fondo-secundario: #F5F9FA;
+}
+
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+    margin: 9rem auto;
+    width: 85%;
+    background-color: white;
+    border-radius: 2.5rem;
+    padding: 4rem;
+    box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.2);
+    height: 100rem;
+}
+/* HEADER */
+header {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -3rem;
+    padding: 0 4rem;
+    border-bottom: 2px solid #C2C7D0;
+}
+.nav {
+    display: flex;
+    align-items: left;
+    gap: 8rem;  
+}
+.nav a {
+    font-size: 2.2rem;
+    color: var(--fondo-principal);
+    font-family: "Modern", sans-serif;
+}
+.nav a:hover {
+    color: var(--color-marca);
+} 
+.btn-logout {
+    background-color: var(--botones);
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
+    font-family: "Modern", sans-serif;
+    font-weight: normal;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--fondo-secundario);
+    transition: background-color 0.3s ease;
+}
+.btn-logout:hover{
+    background-color: var(--boton-secundario);
+}
+@media (max-width: 1920px ) { 
+/* CONTENEDOR PRINCIPAL */
+.container {
+    margin: 3rem auto;
+    height: 80rem;
+}
+/* HEADER */
+header {
+    height: 8rem;
+}
+.nav a {
+    font-size: 2rem;
+}
+} 
+@media (max-width: 1440px) { 
+/* CONTENEDOR PRINCIPAL */
+.container {
+    margin: 3rem auto;
+    padding: 2rem;
+    height: 75rem;
+}
+/* HEADER */
+header {
+    height: 6rem;
+    margin-top: -1rem;
+    padding: 0 2rem;
+}
+.nav {
+    gap: 6rem;  
+}
+.nav a {
+    font-size: 1.5rem;
+}
+.btn-logout {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+}
+} 
+
+/* MAIN */
+.main-container {
+    display: flex;
+    gap: 6rem;
+    margin-top: 5rem;
+}
+
+/* PANEL IZQUIERDO  */
+.panel-izquierdo {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.perfil-usuario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.avatar {
+    width: 20rem;
+    height: auto;
+    margin-top: 2rem;
+}
+.usuario-nombre {
+    font-size: 3.5rem;
+    margin-top: 1.5rem; 
+    font-family: "Actor";
+}
+
+.usuario-email {
+    font-size: 2rem;
+    margin-top: -2rem;
+    margin-bottom: 3.5rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 80%;
+    margin-top: 2rem;
+}
+.menu-item {
+    padding: 1.5rem;
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: left;
+    font-family: "Actor", sans-serif;
+    font-weight: bold;
+}
+.menu-item.active {
+    background-color: var(--color-marca);
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+}
+/* PARA MODIFICAR Y ELIMINAR LA FOTO*/
+.avatar-usuario {
+    position: relative;
+    width: fit-content;
+}
+.editar-icono {
+    position: absolute;
+    top: 0.5rem;        
+    right: 0.5rem;       
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: 0.2s;
+}
+
+.editar-icono:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+.borrar-foto {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: 0.2s ease;
+}
+.borrar-foto img {
+    width: 100%;
+    height: 100%;
+}
+.borrar-foto:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@media (max-width: 1920px) {
+.editar-icono {       
+    width: 3rem;
+    height: 3rem;
+}
+.borrar-foto {
+    width: 3rem;
+    height: 3rem;
+} 
+.main-container {
+    gap: 4rem;
+    margin-top: 3.5rem;
+}
+/* PANEL IZQUIERDO  */
+.avatar {
+    width: 15rem;
+    height: auto;
+    margin-top: 1rem;
+}
+.usuario-nombre {
+    font-size: 3rem;
+    margin-top: 1rem; 
+}
+.usuario-email {
+    font-size: 1.7rem;
+    margin-top: -1rem;
+    margin-bottom: 2.5rem;
+}
+.menu {
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.menu-item {
+    padding: 1rem;
+    font-size: 1.7rem;
+}   
+} 
+@media (max-width: 1440px) { 
+.main-container {
+    gap: 3rem;
+    margin-top: 3rem;
+}
+/* PANEL IZQUIERDO  */
+.avatar {
+    width: 12rem;
+    height: auto;
+    margin-top: 0.7rem;
+}
+.usuario-nombre {
+    font-size: 2.7rem;
+    margin-top: 0.7rem; 
+}
+.usuario-email {
+    font-size: 1.6rem;
+    margin-top: -0.7rem;
+    margin-bottom: 2.5rem;
+}
+.menu {
+    gap: 1.8rem;
+    margin-top: 0.7rem;
+}
+.menu-item {
+    padding: 1rem;
+    font-size: 1.6rem;
+}       
+} 
+
+/* PANEL DERECHO */
+.panel-derecho {
+    width: 70%;
+}
+
+h2 {
+    font-size: 2.6rem;
+    text-align: center;
+    font-family: "Modern", sans-serif;
+    margin-bottom: 2.5rem;
+    font-weight: lighter;
+}
+
+/* FORMULARIO */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.8rem 5rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+}
+
+.campo label {
+    font-weight: bold;
+}
+
+.campo input {
+    border: 1px solid #C5CCD4;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #F4F8FA;
+    font-size: 1.8rem;
+}
+.campo-intereses {
+    grid-column: 1/ span 2;
+}
+
+/* AQUI ESTÁ LO QUE CONCIERNE A LA CIUDAD Y LA PROVINCIA*/
+.fila-ubicacion {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 20rem; 
+}
+
+.campo-provincia,
+.campo-ciudad {
+    grid-column: span 1  ;
+}
+
+.campo-provincia select{
+    font-size: 2rem;
+    line-height: 4rem;    
+    height: 4rem;         
+    display: block;
+    border-radius: 5px;
+}
+
+/* REDES SOCIALES */
+.redes-sociales select,
+.redes-sociales input {
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    border: 1px solid #C5CCD4;
+    background-color: #F4F8FA;
+}
+.social-add {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#add-social {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--botones);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#add-social:hover {
+    background-color: var(--boton-secundario);
+}
+
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.social-list li {
+    margin: 0.5rem 0;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    background: #eef5f7;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-list img {
+    width: 2rem;
+}
+
+.social-list a {
+    color: var(--fondo-principal);
+    font-weight: bold;
+}
+ 
+#social-url {
+    width: 40rem;
+}
+
+.intereses{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3rem;
+}
+.interes img{
+    width:6rem;
+}
+.interes {
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    border-radius: 2rem;
+    transition: 0.2s;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.interes:hover{
+    background-color: var(--color-marca);
+}
+.interes.selected {
+    border: 2px solid var(--color-marca);
+    background-color: #e0ffff;
+    transform: scale(1.05);
+}
+
+.btn-guardar {
+    grid-column: 1/ span 2;            
+    margin-top: 5rem;
+    padding: 1.2rem 3rem;
+    background-color: var(--botones);      
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    justify-self: center;          
+}
+
+.btn-guardar:hover {
+    background-color: var(--boton-secundario);     
+}
+
+.pantalla {
+    display: none;
+}
+.pantalla.visible {
+    display: block;
+}
+
+@media (max-width: 1920px ) { 
+h2 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+}
+/* FORMULARIO */
+.form-grid {
+    gap: 2.5rem 4.5rem;
+}
+.campo {
+    font-size: 1.5rem;
+}
+.campo input {
+    padding: 0.8rem;
+    font-size: 1.5rem;
+}
+ /* AQUI ESTÁ LO QUE CONCIERNE A LA CIUDAD Y LA PROVINCIA*/
+.fila-ubicacion {
+    gap: 1rem; 
+}
+.campo-provincia select{
+    font-size: 1.8rem;
+}
+.intereses{
+    gap: 2.5rem;
+}
+.interes img{
+    width: 4.7rem;
+}
+.btn-guardar {         
+    margin-top: 2.5rem;
+    padding: 1rem 2.83rem;       
+}
+} 
+
+@media (max-width: 1440px ) {
+.btn-guardar {         
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;   
+    font-size: 1.7rem;    
+}        
+}
+
+/* Contenedor en dos columnas */
+.info-personal-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 4rem; 
+    margin-top: 2rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.bloque-completo {
+    grid-column: span 2;
+}
+
+.info-label {
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+}
+
+.info-value {
+    background: #f0f4f6;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    display: inline-block;
+}

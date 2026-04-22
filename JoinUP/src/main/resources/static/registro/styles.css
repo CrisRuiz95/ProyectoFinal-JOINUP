@@ -1,0 +1,497 @@
+@font-face {
+  font-family: "Modern"; 
+  src: url("../fuentes/ModernAesthetic-DemoVersion-Regular.otf");
+}
+
+@font-face {
+    font-family: "Actor" ;
+    src: url("../fuentes/Actor-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat" ;
+    src: url("../fuentes/MontserratAlternates-Regular.ttf");
+}
+@font-face {
+    font-family: "Montserrat bold" ;
+    src: url("../fuentes/MontserratAlternates-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("../fuentes/Oswald-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("../fuentes/Quicksand-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Staatliches" ;
+    src: url("../fuentes/Staatliches-Regular.ttf");
+}
+
+:root{
+  --fondo-principal: #4B6DA7;
+  --texto-principal: #2D3748;
+  --color-marca: #38B2AC;
+  --botones: #F6AD55;
+  --boton-secundario: #FB7D6D;
+  --fondo-secundario: #F5F9FA;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: "Actor", sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    background-color: var(--fondo-secundario);    
+}
+
+/* GLOBALES */
+h1, h2, h3 {
+    font-family: "Montserrat bold" , serif;
+    margin: 0 0 0 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/*************************** HEADER *******************************/
+header {
+    margin: 3rem 10rem;
+}
+.imagen-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    width:13rem;
+}
+.logo img{
+    display: block;
+    max-width: 100%;
+}
+
+.login-link {
+    font-family: "Quicksand", sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    transition: font-size 0.3s ease;
+}
+.login-link:hover {
+    color: var(--fondo-principal);
+    font-size: 2rem;
+}
+/* Para los circulos superiores con su numero */
+.circulos-pasos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8rem;
+}
+
+.paso {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: #cdd5df;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 15px 6px 6px rgba(0, 0, 0, 0.291);
+    transition: 0.3s;
+}
+
+.paso.activo {
+    background: var(--color-marca);
+    color: white;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.439);
+}
+
+.linea {
+    width: 15rem;
+    height: 0.5rem;
+    background: #cdd5df;
+}
+@media (max-width: 1920px ) { 
+header {
+    margin: 2.5rem 8rem;
+}
+.logo {
+    width: 10rem;
+}
+.login-link:hover {
+    font-size: 1.8rem;
+}
+
+.circulos-pasos {
+    margin-bottom: 5rem;
+}
+
+.paso {
+    width:4.5rem;
+    height:4.5rem;
+}
+.linea {
+    width: 9.5rem;
+    height: 0.35rem;
+}      
+} 
+
+@media (max-width: 1440px ) { 
+header {
+    margin: 2rem 7rem;
+}
+
+.login-link {
+    font-size: 1.4rem;
+}
+.login-link:hover {
+    font-size: 1.6rem;
+}
+.circulos-pasos {
+    margin-bottom: 4rem;
+}
+
+.paso {
+    width:4rem;
+    height:4rem;
+}
+.linea {
+    width: 8rem;
+    height: 0.25rem;
+}      
+} 
+/*********************** MAIN Y PANELES **************************/
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    width: 90%;
+    margin: 0 auto;
+    gap: 5rem
+}
+.panel {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+}
+.main-grid > .panel:nth-child(1){
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+.main-grid > .panel:nth-child(2){
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+.main-grid > .panel:nth-child(3){
+    grid-column: 3;
+    grid-row: 1;
+}
+.main-grid > .panel:nth-child(4){
+    grid-column: 3;
+    grid-row: 2;
+}
+.panel h2 {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-family: "Modern", sans-serif;
+    font-weight: lighter;
+    text-align: center;
+}
+
+label {
+    margin-top: 1rem;
+    display: block;
+    font-size: 2rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    background-color: var(--fondo-secundario);
+}
+
+.ciudad-provincia {
+    display: flex;
+    gap: 2rem;
+}
+.cp-nombre{
+    flex: 1;
+}
+.intereses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+.panel p {
+    font-size: 2rem;
+}
+.intereses label {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: var(--fondo-secundario);
+    height: 8rem;
+    border-radius: 15px;
+}
+.intereses img{
+    width: 6rem;
+    height: 6rem;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+}
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-panel-uno, .btn-panel-dos, .btn-panel-tres{
+    margin-top: 4rem;
+    width: 25rem;
+    padding: 1.5rem;
+    background: var(--botones);
+    border-radius: 25px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 2rem;
+    font-family: "Modern", sans-serif;
+    transition: background-color 0.3s ease;
+
+}
+
+.btn-panel-uno:hover, .btn-panel-dos:hover, .btn-panel-tres:hover {
+    background-color: var(--boton-secundario);
+}
+.btn-panel-cuatro {
+    width: 25rem;
+    padding: 1.5rem;
+    background: var(--boton-secundario);
+    border-radius: 25px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 2rem;
+    font-family: "Modern", sans-serif;
+    transition: background-color 0.3s ease;
+}
+.btn-panel-cuatro:hover {
+    background: #ff462d;
+}
+
+.opcion {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: #f5fafc;
+    padding: 15px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.opcion input[type="radio"] {
+    flex: 0 0 auto;  
+    margin: 0;        
+    margin-top: 1.5rem; 
+    width: auto;
+    height: auto;
+}
+.opcion .info {
+    text-align: left; 
+}
+.info {
+    flex: 1;   
+    display: block;
+  }
+
+.info strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+  }
+
+.info p {
+    margin: 0;
+    color: #222;
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+.opcion:hover {
+    background-color: var(--color-marca);
+  }
+
+.confirmacion{
+    margin-top: -0.8rem;
+    text-align: center;
+  }
+
+/* Codigo para seleccionar los tres intereses*/
+
+label.interes.selected {
+  border: 2px solid var(--color-marca);
+  background-color: #e0ffff;
+}
+
+.interes:hover {
+    background-color: var(--color-marca);
+}
+
+@media (max-width: 1920px ) { 
+.panel h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+.main-grid {
+    gap: 4rem
+}
+.panel {
+    padding: 20px;
+}
+label {
+    margin-top: 0.5rem;
+    display: block;
+    font-size: 1.7rem;
+}
+
+input, select {
+    font-size: 1rem;
+}
+.ciudad-provincia {
+    gap: 1.7rem;
+}
+
+.intereses {
+    gap: 1.7rem;
+    margin-top: 1.2rem;
+}
+.panel p {
+    font-size: 1.7rem;
+}
+.intereses label {
+    font-size: 1.7rem;
+    height: 7rem;
+}
+.intereses img{
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+    
+.btn-panel-uno, .btn-panel-tres{
+    margin-top: 3rem;
+    width: 18rem;
+    padding: 1.3rem;
+    font-size: 1.7rem;
+}
+.btn-panel-dos{
+    margin-top: 5.5rem;
+    width: 18rem;
+    padding: 1.3rem;
+    font-size: 1.7rem;
+}
+.btn-panel-cuatro {
+    margin-top: 3rem;
+    width: 18rem;
+    padding: 1.3rem;
+    font-size: 1.7rem;
+}
+.opcion {
+    gap: 10px;
+    background: #f5fafc;
+    padding: 1rem 1.7rem;
+}
+.info strong {
+    font-size: 2rem;
+}
+.info p {
+    font-size: 1.6rem;
+}
+.confirmacion{
+    margin-top: -1.8rem;
+    margin-bottom: -1rem;
+}    
+} 
+
+@media (max-width: 1440px ) { 
+.panel h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+.main-grid {
+    gap: 3rem
+}
+.panel {
+    padding: 15px;
+}
+label {
+    margin-top: 0rem;
+    font-size: 1.4rem;
+}
+
+input, select {
+    font-size: 0.7;
+}
+.ciudad-provincia {
+    gap: 1.4rem;
+}
+.btn-panel-uno, .btn-panel-tres{
+    margin-top: 2.7rem;
+    width: 15rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+.btn-panel-dos{
+    margin-top: 4.2rem;
+    width: 15rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+.btn-panel-cuatro {
+    margin-top: 2.7rem;
+    width: 15rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+.opcion {
+    gap: 7px;
+    background: #f5fafc;
+    padding: 1rem 1.7rem;
+}
+.info strong {
+    font-size: 1.7rem;
+}
+.info p {
+    font-size: 1.3rem;
+}
+.confirmacion{
+    margin-top: -1.4rem;
+    margin-bottom: -1rem;
+}        
+  } 

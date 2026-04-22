@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="refresh" content="3; url=pagos-3.html">
+    <title>Pasarela de pago</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container pagos-container">
+        <div class="panel">
+            <img class="w-25" src="img/logo.png" alt="">
+        </div>
+	    
+	    <!-- Pasos transacción -->
+	    <div class="pasos-transaccion">
+			  <div class="paso-flecha">
+			    <span class="paso-numero">1</span>
+			    <span class="paso-titulo">Seleccione método de pago</span>
+			    <span class="paso-icono">
+			      <img src="img/card-icon.png" width="33" height="33" alt="card-icon" />
+			    </span>
+			  </div>
+			  <div class="paso-flecha selected">
+			    <span class="paso-numero">2</span>
+			    <span class="paso-titulo">Comprobación autentificación</span>
+			    <span class="paso-icono">
+			      <img src="img/lock-icon.png" width="33" height="33" alt="lock-icon" />
+			    </span>
+			  </div>
+			  <div class="paso-flecha">
+			    <span class="paso-numero color-title-blue">3</span>
+			    <span class="paso-titulo">Solicitando autorización</span>
+			    <span class="paso-icono">
+			      <img src="img/shield-icon.png" width="33" height="33" alt="shield-icon" />
+			    </span>
+			  </div>
+			  <div class="paso-flecha">
+			    <span class="paso-numero">4</span>
+			    <span class="paso-titulo">Resultado transacción</span>
+			    <span class="paso-icono">
+			      <img src="img/hand-ok-icon.png" width="33" height="33" alt="hand-ok-icon" />
+			    </span>
+			  </div>
+		   
+			</div>
+	   <div class="row justify-center">
+	    <div class="col-5">
+		    <img src="img/loading.gif" alt="loading">
+	    </div>
+    </div>
+	   
+    </div>
+    <script src="../js/auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

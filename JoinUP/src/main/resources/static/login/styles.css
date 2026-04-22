@@ -1,0 +1,402 @@
+@font-face {
+  font-family: "Modern"; 
+  src: url("../fuentes/ModernAesthetic-DemoVersion-Regular.otf");
+}
+
+@font-face {
+    font-family: "Actor" ;
+    src: url("../fuentes/Actor-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat" ;
+    src: url("../fuentes/MontserratAlternates-Regular.ttf");
+}
+@font-face {
+    font-family: "Montserrat bold" ;
+    src: url("../fuentes/MontserratAlternates-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("../fuentes/Oswald-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("../fuentes/Quicksand-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Staatliches" ;
+    src: url("../fuentes/Staatliches-Regular.ttf");
+}
+
+:root{
+  --fondo-principal: #4B6DA7;
+  --texto-principal: #2D3748;
+  --color-marca: #38B2AC;
+  --botones: #F6AD55;
+  --boton-secundario: #FB7D6D;
+  --fondo-secundario: #F5F9FA;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: "Actor", sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    background-color: var(--fondo-principal);    
+}
+
+/* GLOBALES */
+h1, h2, h3 {
+    font-family: "Montserrat bold" , serif;
+    margin: 0 0 0 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/****************** PARTE DEL HEADER 2K **************************/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+.header-enlace img{
+    width: 10rem;
+    height: auto;
+    transform: scaleX(-1);
+    margin-left: 5rem;
+    margin-top: 0.7rem;
+}
+.header-enlace img:hover{
+    filter: brightness(0) invert(1);
+}
+
+.header-enlace {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+.header-enlace a{
+    display: flex;
+    align-items: center;
+}
+.header-enlace h4 {
+    display: inline-block;
+    justify-content: center;
+    font-family: "Modern", sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    transition: font-size 0.3s ease;
+}
+h4:hover{
+    color: var(--color-marca);
+    font-size: 2rem;
+}
+
+@media (max-width: 1920px) { 
+.header-enlace img{
+    width: 6rem;
+}
+h4 {
+    font-size: 1.7rem;
+}
+h4:hover{
+    font-size: 1.75rem;
+}  
+} /* FIN DE MQ SCREEN ESTANDAR*/ 
+
+@media (max-width: 1440px) { 
+.header-enlace img{
+    width: 6rem;
+    margin-top: 0.3rem;
+}
+h4 {
+    font-size: 1.5rem
+}
+h4:hover{
+    font-size: 1.6rem;
+}
+} 
+/******************************** MAIN **************************/
+.container{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    margin-top: 10vh;
+}
+
+/* PANEL IZQUIERDO*/
+.panel-izquierdo{
+    background-color: white;
+    width: 50%;
+}
+
+.bienvenida{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--fondo-secundario);
+   height: 25%;
+}
+.bienvenida h1{
+    font-family: "Staatliches", sans-serif;
+    text-align: center;
+    padding: 5rem;
+    color: var(--color-marca);
+    font-size: 9.5rem;
+    font-weight: lighter;
+}
+.img-logo{
+    width: 60rem;
+    height: 90rem;
+    margin: -4rem auto;
+}
+.panel-izquierdo img{
+   display: block;
+   max-width: 100%;  
+}
+
+@media (max-width: 1920px) { 
+.img-logo{
+    width: 40rem !important;
+    height: 40rem;
+    margin: -5rem auto !important; 
+}
+} 
+
+@media (min-width: 1440px) { 
+.bienvenida h1{
+    padding: 2.5rem;
+    font-size: 8rem;
+}
+.img-logo{
+    width: 35rem ;
+    height: 20rem;
+    margin: -5rem auto; 
+}   
+}
+
+/* PANEL DERECHO*/
+.panel-derecho{
+    background-image: url(../imagenes/momentos-de-celebracion-de-amigas.jpg);
+    width: 50%;
+    background-size: cover;
+    background-position: center center;
+}
+.formulario-login {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    padding: 4rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-top: 10rem;
+}
+
+.formulario-login h2 {
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    margin: 4rem auto;
+    color: var(--texto-principal);
+    font-size: 5rem;
+}
+.inputs-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.formulario-login input {
+    width: 60%;
+    height:6rem;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    background-color: #605F5F;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 2.5rem;
+    color: white;
+    font-family: "Actor" ;
+}
+.formulario-login input::placeholder {
+    color: #E0E0E0;
+    font-family: "Modern", sans-serif;
+    font-size: 2.2rem;
+}
+.inputs-login a{
+    text-align: right;
+    margin: 0rem 0rem 3rem 30rem;
+    color: var(--texto-principal);
+    font-style: italic;
+    font-family: "Quicksand", sans-serif;
+}
+.inputs-login a:hover{
+    color: var(--fondo-principal);
+    font-weight: bold;
+}
+.inputs-login button {
+    width: 40%;
+    padding: 1.7rem;
+    background-color: var(--botones);
+    border: none;
+    border-radius: 5rem;
+    color: white;
+    font-size: 2rem;
+    font-family: "Modern", sans-serif;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: background-color 0.3s ease;
+}
+.inputs-login button:hover{
+    background-color: var(--boton-secundario)
+}
+.formulario-login .google-login {
+    width: 50.5%;
+    padding: 1.7rem;
+    background-color: var(--botones);
+    border: none;
+    border-radius: 5rem;
+    margin-top: 3rem;
+    color: white;
+    font-size: 2rem;
+    font-family: "Modern", sans-serif;
+    cursor: pointer;
+    background-color: var(--boton-secundario);
+}
+
+.formulario-login .google-login:hover {
+    background-color: #ff462d;
+}
+
+.formulario-login .google-login img {
+    vertical-align: middle;
+    margin-right: 1rem;
+    width: 4rem;
+    height: auto;
+}
+.crear-cuenta{
+    width: 40%;
+    padding: 1.7rem;
+    background-color: var(--botones);
+    border: none;
+    border-radius: 5rem;
+    color: white;
+    font-size: 2rem;
+    font-family: "Modern", sans-serif;
+    cursor: pointer;
+    margin: 1rem auto 0 28rem;
+}
+
+.crear-cuenta:hover{
+    background-color: var(--boton-secundario);
+}
+
+@media (max-width: 1920px ) { 
+    
+.formulario-login {
+    margin-top: 7.5rem;
+}
+.formulario-login h2 {
+    margin: 0.2rem auto 2.5rem auto;
+    font-size: 4rem;
+}
+.formulario-login input {
+    width: 57%;
+    height: 5.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+}
+.formulario-login input::placeholder {
+    color: #E0E0E0;
+    font-family: "Modern", sans-serif;
+    font-size: 2.2rem;
+}
+.inputs-login a{
+    margin: 0rem 0rem 2rem 15rem;
+}
+.inputs-login button {
+    width: 35%;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 0rem;
+}
+.formulario-login .google-login {
+    width: 55.5%;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.formulario-login .google-login img {
+    width: 3rem;
+}
+.crear-cuenta{
+    width: 40%;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    margin: 1rem auto 0 21rem;
+}
+} 
+
+ @media (max-width: 1440px ) { 
+.formulario-login h2 {
+    margin: -1rem auto 2.5rem auto;
+    font-size: 3.5rem;
+}
+.formulario-login input {
+    width: 55%;
+    height: 5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+.formulario-login input::placeholder {
+    color: #E0E0E0;
+    font-family: "Modern", sans-serif;
+    font-size: 1.5rem;
+}
+.inputs-login a{
+    margin: 0rem 0rem 2rem 15rem;
+    font-size: 1.5rem;
+}
+.inputs-login button {
+    width: 35%;
+    height: 4rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0rem;
+}
+.formulario-login .google-login {
+    width: 45.5%;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.formulario-login .google-login img {
+    width: 2rem;
+}
+.crear-cuenta{
+    width: 35%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    margin: 1rem auto 0 16rem;
+}
+} 

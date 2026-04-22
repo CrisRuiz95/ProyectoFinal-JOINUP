@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasarela de pago</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container pagos-container">
+        <div class="panel">
+            <img class="w-25" src="img/logo.png" alt="">
+        </div>
+	    
+	    <!-- Pasos transacción -->
+	    <div class="pasos-transaccion">
+			  <div class="paso-flecha selected">
+			    <span class="paso-numero">1</span>
+			    <span class="paso-titulo">Seleccione método de pago</span>
+			    <span class="paso-icono">
+			      <img src="img/card-icon.png" width="33" height="33" alt="card-icon" />
+			    </span>
+			  </div>
+			  <div class="paso-flecha">
+			    <span class="paso-numero">2</span>
+			    <span class="paso-titulo">Comprobación autentificación</span>
+			    <span class="paso-icono">
+			      <img src="img/lock-icon.png" width="33" height="33" alt="lock-icon" />
+			    </span>
+			  </div>
+			  <div class="paso-flecha">
+			    <span class="paso-numero color-title-blue">3</span>
+			    <span class="paso-titulo">Solicitando autorización</span>
+			    <span class="paso-icono">
+			      <img src="img/shield-icon.png" width="33" height="33" alt="shield-icon" />
+			    </span>
+			  </div>
+			  <div class="paso-flecha">
+			    <span class="paso-numero">4</span>
+			    <span class="paso-titulo">Resultado transacción</span>
+			    <span class="paso-icono">
+			      <img src="img/hand-ok-icon.png" width="33" height="33" alt="hand-ok-icon" />
+			    </span>
+			  </div>
+			</div>
+	    <div class="row justify-around">
+		    <div class="col-3">
+			    <div class="panel p-3 h-100">
+				    <div class="row border-bottom">
+					    <div class="col border-3">
+						    <h3 class="font-modern font-color-blue">Datos de la operación</h3>
+					    </div>
+				    </div>
+				    <div class="row border-bottom">
+					    <div class="col-5 py-3 border-3">
+						    <span>Importe:</span>
+					    </div>
+					    <div class="col-7 py-3 border-3">
+						    <strong>10,00€</strong>
+					    </div>
+				    </div>
+				    <div class="row border-bottom">
+					    <div class="col-5 py-3 border-3">
+						    <span>Comercio:</span>
+					    </div>
+					    <div class="col-7 py-3 border-3">
+						    <span>JOIN UP (SPAIN)</span>
+					    </div>
+				    </div>
+				    <div class="row border-bottom">
+					    <div class="col-5 py-3 border-3">
+						    <span>Terminal:</span>
+					    </div>
+					    <div class="col-7 py-3 border-3">
+						    <span>346778097-1</span>
+					    </div>
+				    </div>
+				    <div class="row border-bottom">
+					    <div class="col-5 py-3 border-3">
+						    <span>Pedido:</span>
+					    </div>
+					    <div class="col-7 py-3 border-3">
+						    <span>180828115634</span>
+					    </div>
+				    </div>
+				    <div class="row">
+					    <div class="col-5 py-3 border-3">
+						    <span>Fecha:</span>
+					    </div>
+					    <div class="col-7 py-3 border-3">
+						    <span>26/09/2025  17:40</span>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		    <div class="col-7">
+			    <div class="panel h-100">
+				    <div class="row align-center justify-start py-3 m-0 rounded-sm" style="background-color:#D9d9d9">
+					    <div class="col-4 p-0 ml-4">
+						    <h2>Pagar con tarjeta</h2>
+					    </div>
+					    <div class="col-1 mx-2">
+						    <img src="img/visa.png" height="50" alt="visa">
+					    </div>
+					    <div class="col-1 mx-2">
+						    <img src="img/mastercard.png" height="50" alt="visa">
+					    </div>
+					    <div class="col-1 mx-2">
+						    <img src="img/maestro.png" height="42" alt="visa">
+					    </div>
+				    </div>
+				    <div class="row mt-2 p-1">
+					    <div class="col-3"></div>
+					    <div class="col-6 align-center">
+						    <form id="formPago">
+							    <div class="row">
+								    <div class="col p-0">
+									    Nº Tarjeta:
+								    </div>
+							    </div>
+							    <div class="row align-center">
+								    <div class="col-2">
+									    <img src="img/card-icon.png" height="30" width="30" alt="">
+								    </div>
+								    <div class="col-10">
+												<input class="w-100" name="card" type="text" />
+								    </div>
+							    </div>
+							    <div class="row mt-2">
+								    <div class="col p-0">
+									    Caducidad:
+								    </div>
+							    </div>
+							    <div class="row align-center">
+								    <div class="col-2">
+									    <img src="img/calendar-icon.png" height="30" width="30" alt="">
+								    </div>
+								    <div class="col-3 mr-2">
+												<input class="w-100" name="month" type="number" placeholder="mm" />
+								    </div>
+								    <div class="col-3">
+												<input class="w-100" name="year" type="number" placeholder="aa" />
+								    </div>
+							    </div>
+							    <div class="row mt-2">
+								    <div class="col p-0">
+									    Cód. Seguridad:
+								    </div>
+							    </div>
+							    <div class="row align-center">
+								    <div class="col-2">
+									    <img src="img/lock-icon.png" height="30" width="30" alt="">
+								    </div>
+								    <div class="col-3">
+												<input class="w-100" name="month" type="number" placeholder="XXX" />
+								    </div>
+								    <div class="col-2 mx-2">
+												<img src="img/help-blue-icon.png" height="33" width="33" alt="">
+								    </div>
+							    </div>
+							    <div class="row my-3 justify-between">
+								    <div class="col-5">
+									     <button class="btn-pagos cancelar w-100" type="button" id="btnCancelar">Cancelar</button>
+								    </div>
+								    <div class="col-5">
+									     <button class="btn-pagos pagar w-100" type="submit" id="btnPagar">Pagar</button>
+								    </div>
+							    </div>
+					      </form>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+	    </div>
+	   
+    </div>
+    <script src="../js/auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
